@@ -1,0 +1,731 @@
+{"status":"SUCCESS","data":{"pipelineExecutionSummary":{"pipelineIdentifier":"cd_filtered_list","orgIdentifier":"default","projectIdentifier":"technical_exercise","planExecutionId":"6rbxRpzGS6WrsvvAJROFzg","name":"cd - filtered list","yamlVersion":"0","status":"Expired","tags":[{"key":"13","value":""},{"key":"14","value":""},{"key":"22","value":""},{"key":"cd","value":""},{"key":"key 1 then key 2 order","value":""}],"executionTriggerInfo":{
+  "triggerType": "WEBHOOK_CUSTOM",
+  "triggeredBy": {
+    "uuid": "systemUser",
+    "identifier": "trigger",
+    "extraInfo": {
+      "execution_trigger_tag_needed_for_abort": "WqS38aeyQjayoqy6mzwceA:default:technical_exercise:cd_filtered_list",
+      "triggerRef": "WqS38aeyQjayoqy6mzwceA/default/technical_exercise/trigger",
+      "eventCorrelationId": "65076515e67d352a0a0c385c"
+    },
+    "triggerIdentifier": "trigger",
+    "triggerName": "trigger"
+  },
+  "isRerun": false
+},"governanceMetadata":{
+  "id": "3825846",
+  "deny": false,
+  "details": [{
+    "policySetId": "",
+    "deny": false,
+    "policyMetadata": [],
+    "policySetName": "ff",
+    "status": "pass",
+    "identifier": "ff",
+    "created": "1665168585186",
+    "accountId": "WqS38aeyQjayoqy6mzwceA",
+    "orgId": "",
+    "projectId": "",
+    "description": ""
+  }, {
+    "policySetId": "",
+    "deny": false,
+    "policyMetadata": [{
+      "policyId": "",
+      "policyName": "Pipeline - forbidden shell commands",
+      "severity": "pass",
+      "denyMessages": [],
+      "status": "pass",
+      "identifier": "forbidden_shell_commands",
+      "accountId": "WqS38aeyQjayoqy6mzwceA",
+      "orgId": "default",
+      "projectId": "technical_exercise",
+      "created": "1665077265590",
+      "updated": "1665169052368",
+      "error": ""
+    }],
+    "policySetName": "testps",
+    "status": "pass",
+    "identifier": "testps",
+    "created": "1693429833469",
+    "accountId": "WqS38aeyQjayoqy6mzwceA",
+    "orgId": "default",
+    "projectId": "technical_exercise",
+    "description": ""
+  }],
+  "message": "",
+  "timestamp": "1694983446700",
+  "status": "pass",
+  "accountId": "WqS38aeyQjayoqy6mzwceA",
+  "orgId": "default",
+  "projectId": "technical_exercise",
+  "entity": "cd_filtered_list",
+  "type": "pipeline",
+  "action": "onrun",
+  "created": "1694983446694"
+},"moduleInfo":{"cd":{"__recast":"io.harness.cdng.pipeline.executions.beans.CDPipelineModuleInfo","artifactDisplayNames":["bitnami/nginx","index.docker.io/bitnami/nginx:latest","bitnami/nginx:latest","latest"],"envGroupIdentifiers":[],"envIdentifiers":["dev"],"environmentTypes":["PreProduction"],"freezeIdentifiers":[],"gitOpsAppIdentifiers":[],"infrastructureIdentifiers":["gcpinfra","colimak8sinfra","colimak8sinfralanes"],"infrastructureNames":["gcp-k8s-infra","colima-k8s-infra","colima-k8s-infra-lanes-matrix"],"infrastructureTypes":["KubernetesDirect"],"serviceDefinitionTypes":["Kubernetes"],"serviceIdentifiers":["dummynginxk8ssvc"]}},"layoutNodeMap":{"fiTXKqvTR1mzDAEh3sx9GQ":{"nodeType":"Deployment","nodeGroup":"STAGE","nodeIdentifier":"cd<+strategy.identifierPostFix>","name":"cd<+strategy.identifierPostFix>","nodeUuid":"fiTXKqvTR1mzDAEh3sx9GQ","status":"NotStarted","module":"cd","moduleInfo":{"cd":{}},"edgeLayoutList":{"currentNodeChildren":[],"nextIds":[]},"isRollbackStageNode":false},"Qe0IfGP-StaIXB7HxLfA_A":{"nodeType":"MATRIX","nodeGroup":"STRATEGY","nodeIdentifier":"cd","name":"cd","nodeUuid":"Qe0IfGP-StaIXB7HxLfA_A","status":"Expired","moduleInfo":{"stepParameters":{"__recast":"io.harness.cdng.pipeline.beans.MultiDeploymentStepParameters","environments":{"__recast":"io.harness.cdng.environment.yaml.EnvironmentsYaml","uuid":"fiTXKqvTR1mzDAEh3sx9GQ","filters":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper"},"valueClass":"java.util.List","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"values":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper","value":[{"__recast":"io.harness.cdng.environment.yaml.EnvironmentYamlV2","uuid":"4n1-439hS-6yZqyBLk9YHg","environmentRef":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper","value":"dev"},"valueClass":"java.lang.String","typeString":true,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"deployToAll":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper"},"valueClass":"java.lang.Boolean","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"filters":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper","value":[{"__recast":"io.harness.cdng.environment.filters.FilterYaml","uuid":"yCzuDpG2RxqoGQ8buJCWsQ","identifier":"filter","type":"tags","entities":["infrastructures"],"spec":{"__recast":"io.harness.cdng.environment.filters.TagsFilter","matchType":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper","value":"any"},"valueClass":"java.lang.String","typeString":true,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"tags":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper","value":{"key1":"value1","key2":"value2"}},"valueClass":"java.util.Map","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}}}}]},"valueClass":"java.util.List","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"infrastructureDefinitions":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper"},"valueClass":"java.util.List","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"infrastructureDefinition":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper"},"valueClass":"io.harness.cdng.infra.yaml.InfraStructureDefinitionYaml","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"environmentInputs":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper"},"valueClass":"java.util.Map","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"serviceOverrideInputs":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper"},"valueClass":"java.util.Map","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"gitOpsClusters":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper"},"valueClass":"java.util.List","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}}}]},"valueClass":"java.util.List","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"environmentsMetadata":{"__recast":"io.harness.cdng.environment.yaml.EnvironmentsMetadata","uuid":"6Wmr542gRfSd4EdD-if67Q","parallel":true}},"childNodeId":"fiTXKqvTR1mzDAEh3sx9GQ","maxConcurrency":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper"},"valueClass":"java.lang.Integer","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"strategyType":"MATRIX","subType":"MULTI_SERVICE_ENV_DEPLOYMENT","serviceYamlV2":{"__recast":"io.harness.cdng.service.beans.ServiceYamlV2","uuid":"9WgyIDiCTHGYVKQ6tzfDlQ","serviceRef":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper","value":"dummynginxk8ssvc"},"valueClass":"java.lang.String","typeString":true,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"serviceInputs":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper","value":{"serviceDefinition":{"type":"Kubernetes","spec":{"artifacts":{"primary":{"primaryArtifactRef":"dh","__uuid":"YmiTkOdcQWiDqcdDWnNjFQ"},"__uuid":"1feKh1PXTje2YSIJzApcDg"},"__uuid":"EJHf4ARcROeF-yw3GuOR3A"},"__uuid":"PznMTlT4Ti-gReBkC_0m7g"},"__uuid":"I2UCzG1HQj24VZIAJ3fB7A"}},"valueClass":"java.util.Map","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}}},"deploymentType":"KUBERNETES"},"maxConcurrency":{"value":0}},"startTs":1694983467290,"endTs":1694983749761,"edgeLayoutList":{"currentNodeChildren":["79cUF_w7RLqOWHoDOzGLFw","j9-SwGI8S26n6pP8Dbkiww","etb2MY8CTFmZXVymrEVIxg"],"nextIds":["vkVeMcWRTJeO5dAixkrwCg"]},"failureInfo":{
+  "message": "Please Check the timeout configuration on the step to extend the duration of the step"
+},"stepDetails":{"svcEnvCount":{"svcCount":1,"envCount":1}},"isRollbackStageNode":false},"vkVeMcWRTJeO5dAixkrwCg":{"nodeType":"PipelineRollback","nodeGroup":"STAGE","nodeIdentifier":"prb-XZ4TQmsoS8qbHE-k3ttlFA","name":"Pipeline Rollback","nodeUuid":"vkVeMcWRTJeO5dAixkrwCg","status":"Success","module":"pms","moduleInfo":{"pms":{}},"startTs":1694983749794,"endTs":1694984660867,"edgeLayoutList":{"currentNodeChildren":[],"nextIds":[]},"failureInfo":{
+  "message": ""
+},"failureInfoDTO":{"message":"","failureTypeList":[],"responseMessages":[]},"nodeExecutionId":"8KIL9leqQd2V-t2pY6advg","executionInputConfigured":false,"isRollbackStageNode":false},"79cUF_w7RLqOWHoDOzGLFw":{"nodeType":"Deployment","nodeGroup":"STAGE","nodeIdentifier":"cd_dev_colimak8sinfra","name":"cd_dev_colimak8sinfra","nodeUuid":"fiTXKqvTR1mzDAEh3sx9GQ","status":"Expired","moduleInfo":{"cd":{"__recast":"io.harness.cdng.pipeline.executions.beans.CDStageModuleInfo","rollbackDuration":0,"serviceInfo":{"__recast":"io.harness.cdng.pipeline.executions.beans.ServiceExecutionSummary","identifier":"dummynginxk8ssvc","displayName":"dummy-nginx-k8s-svc","deploymentType":"Kubernetes","gitOpsEnabled":false,"artifacts":{"__recast":"io.harness.cdng.pipeline.executions.beans.ServiceExecutionSummary$ArtifactsSummary","primary":{"__recast":"io.harness.ngpipeline.pipeline.executions.beans.DockerArtifactSummary","imagePath":"bitnami/nginx","tag":"latest"},"artifactDisplayName":"bitnami/nginx:latest","sidecars":[]}},"infraExecutionSummary":{"__recast":"io.harness.cdng.pipeline.executions.beans.InfraExecutionSummary","identifier":"dev","name":"dev","type":"PreProduction","infrastructureIdentifier":"colimak8sinfra","infrastructureName":"colima-k8s-infra"}}},"startTs":1694983467490,"endTs":1694983749017,"edgeLayoutList":{"currentNodeChildren":[],"nextIds":[]},"nodeRunInfo":{
+  "whenCondition": "\u003c+OnPipelineSuccess\u003e",
+  "evaluatedCondition": true,
+  "expressions": [{
+    "expression": "OnPipelineSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }]
+},"failureInfo":{
+  "message": "Please Check the timeout configuration on the step to extend the duration of the step"
+},"failureInfoDTO":{"message":"Please Check the timeout configuration on the step to extend the duration of the step","failureTypeList":["EXPIRED"],"responseMessages":[{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]}]},"nodeExecutionId":"79cUF_w7RLqOWHoDOzGLFw","strategyMetadata":{"currentiteration":0,"totaliterations":3,"matrixmetadata":{"matrixvalues":{"identifier":"colimak8sinfra","environmentRef":"dev"},"matrixcombination":[0],"subtype":"MULTI_ENV_DEPLOYMENT","matrixkeystoskipinname":["environmentInputs","serviceInputs","infraInputs"],"nodename":""},"identifierpostfix":""},"isRollbackStageNode":false},"etb2MY8CTFmZXVymrEVIxg":{"nodeType":"Deployment","nodeGroup":"STAGE","nodeIdentifier":"cd_dev_gcpinfra","name":"cd_dev_gcpinfra","nodeUuid":"fiTXKqvTR1mzDAEh3sx9GQ","status":"Expired","moduleInfo":{"cd":{"__recast":"io.harness.cdng.pipeline.executions.beans.CDStageModuleInfo","rollbackDuration":0,"serviceInfo":{"__recast":"io.harness.cdng.pipeline.executions.beans.ServiceExecutionSummary","identifier":"dummynginxk8ssvc","displayName":"dummy-nginx-k8s-svc","deploymentType":"Kubernetes","gitOpsEnabled":false,"artifacts":{"__recast":"io.harness.cdng.pipeline.executions.beans.ServiceExecutionSummary$ArtifactsSummary","primary":{"__recast":"io.harness.ngpipeline.pipeline.executions.beans.DockerArtifactSummary","imagePath":"bitnami/nginx","tag":"latest"},"artifactDisplayName":"bitnami/nginx:latest","sidecars":[]}},"infraExecutionSummary":{"__recast":"io.harness.cdng.pipeline.executions.beans.InfraExecutionSummary","identifier":"dev","name":"dev","type":"PreProduction","infrastructureIdentifier":"gcpinfra","infrastructureName":"gcp-k8s-infra"}}},"startTs":1694983468030,"endTs":1694983748836,"edgeLayoutList":{"currentNodeChildren":[],"nextIds":[]},"nodeRunInfo":{
+  "whenCondition": "\u003c+OnPipelineSuccess\u003e",
+  "evaluatedCondition": true,
+  "expressions": [{
+    "expression": "OnPipelineSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }]
+},"failureInfo":{
+  "message": "Please Check the timeout configuration on the step to extend the duration of the step"
+},"failureInfoDTO":{"message":"Please Check the timeout configuration on the step to extend the duration of the step","failureTypeList":["EXPIRED"],"responseMessages":[{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]}]},"nodeExecutionId":"etb2MY8CTFmZXVymrEVIxg","strategyMetadata":{"currentiteration":2,"totaliterations":3,"matrixmetadata":{"matrixvalues":{"identifier":"gcpinfra","environmentRef":"dev"},"matrixcombination":[2],"subtype":"MULTI_ENV_DEPLOYMENT","matrixkeystoskipinname":["environmentInputs","serviceInputs","infraInputs"],"nodename":""},"identifierpostfix":""},"isRollbackStageNode":false},"j9-SwGI8S26n6pP8Dbkiww":{"nodeType":"Deployment","nodeGroup":"STAGE","nodeIdentifier":"cd_dev_colimak8sinfralanes","name":"cd_dev_colimak8sinfralanes","nodeUuid":"fiTXKqvTR1mzDAEh3sx9GQ","status":"Expired","moduleInfo":{"cd":{"__recast":"io.harness.cdng.pipeline.executions.beans.CDStageModuleInfo","rollbackDuration":0,"serviceInfo":{"__recast":"io.harness.cdng.pipeline.executions.beans.ServiceExecutionSummary","identifier":"dummynginxk8ssvc","displayName":"dummy-nginx-k8s-svc","deploymentType":"Kubernetes","gitOpsEnabled":false,"artifacts":{"__recast":"io.harness.cdng.pipeline.executions.beans.ServiceExecutionSummary$ArtifactsSummary","primary":{"__recast":"io.harness.ngpipeline.pipeline.executions.beans.DockerArtifactSummary","imagePath":"bitnami/nginx","tag":"latest"},"artifactDisplayName":"bitnami/nginx:latest","sidecars":[]}},"infraExecutionSummary":{"__recast":"io.harness.cdng.pipeline.executions.beans.InfraExecutionSummary","identifier":"dev","name":"dev","type":"PreProduction","infrastructureIdentifier":"colimak8sinfralanes","infrastructureName":"colima-k8s-infra-lanes-matrix"}}},"startTs":1694983467482,"endTs":1694983748124,"edgeLayoutList":{"currentNodeChildren":[],"nextIds":[]},"nodeRunInfo":{
+  "whenCondition": "\u003c+OnPipelineSuccess\u003e",
+  "evaluatedCondition": true,
+  "expressions": [{
+    "expression": "OnPipelineSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }]
+},"failureInfo":{
+  "message": "Please Check the timeout configuration on the step to extend the duration of the step"
+},"failureInfoDTO":{"message":"Please Check the timeout configuration on the step to extend the duration of the step","failureTypeList":["EXPIRED"],"responseMessages":[{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]}]},"nodeExecutionId":"j9-SwGI8S26n6pP8Dbkiww","strategyMetadata":{"currentiteration":1,"totaliterations":3,"matrixmetadata":{"matrixvalues":{"identifier":"colimak8sinfralanes","environmentRef":"dev"},"matrixcombination":[1],"subtype":"MULTI_ENV_DEPLOYMENT","matrixkeystoskipinname":["environmentInputs","serviceInputs","infraInputs"],"nodename":""},"identifierpostfix":""},"isRollbackStageNode":false}},"modules":["cd","pms"],"startingNodeId":"Qe0IfGP-StaIXB7HxLfA_A","startTs":1694983446701,"endTs":1694984660985,"createdAt":1694983446765,"canRetry":true,"showRetryHistory":false,"runSequence":161,"successfulStagesCount":1,"runningStagesCount":0,"failedStagesCount":0,"totalStagesCount":2,"storeType":"INLINE","executionInputConfigured":false,"parentStageInfo":{"hasparentpipeline":false,"stagenodeid":"","executionid":"","identifier":"","projectid":"","orgid":"","runsequence":0},"allowStageExecutions":false,"executionMode":"NORMAL","notesExistForPlanExecutionId":false,"stagesExecution":false},"executionGraph":{"rootNodeId":"Kx1N1Zx_TvuG6vw3UBRrmA","nodeMap":{"X6VMOvbpTsezpfIKk2JIoQ":{"uuid":"X6VMOvbpTsezpfIKk2JIoQ","setupId":"teIjKnOtSteYdt4TmM6N0A","name":"3 2nd part","identifier":"part_2","baseFqn":"pipeline.stages.cd_dev_gcpinfra.spec.execution.steps.part_2","outcomes":{},"stepParameters":{"identifier":"part_2","name":"3 2nd part","when":{"stageStatus":"SUCCESS","condition":"gcp-k8s-infra != 'colima-k8s-infra'"},"childNodeID":"teIjKnOtSteYdt4TmM6N0Asteps","variables":{}},"startTs":1694983519389,"endTs":1694983748317,"stepType":"STEP_GROUP","status":"Expired","failureInfo":{"message":"Please Check the timeout configuration on the step to extend the duration of the step","failureTypeList":["EXPIRED"],"responseMessages":[{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]}]},"skipInfo":null,"nodeRunInfo":{
+  "whenCondition": "\u003c+OnStageSuccess\u003e \u0026\u0026 (\u003c+infra.name\u003e !\u003d \u0027colima-k8s-infra\u0027)",
+  "evaluatedCondition": true,
+  "expressions": [{
+    "expression": "OnStageSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }, {
+    "expression": "infra.name",
+    "expressionValue": "gcp-k8s-infra",
+    "count": 1
+  }]
+},"executableResponses":[{
+  "child": {
+    "childNodeId": "teIjKnOtSteYdt4TmM6N0Asteps",
+    "logKeys": [],
+    "units": []
+  }
+}],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_gcpinfra/level4:spec/level5:execution/level6:steps/level7:part_2"},"r0aUL34KQLaeKN35CNcO8g":{"uuid":"r0aUL34KQLaeKN35CNcO8g","setupId":"vg6CAz87QgGQuXuhwFR9Zg","name":"1 first part","identifier":"_first_part","baseFqn":"pipeline.stages.cd_dev_colimak8sinfra.spec.execution.steps._first_part","outcomes":{},"stepParameters":{"identifier":"_first_part","name":"1 first part","when":{"stageStatus":"SUCCESS","condition":"colima-k8s-infra != 'colima-k8s-infra'"},"childNodeID":"vg6CAz87QgGQuXuhwFR9Zgsteps","variables":{}},"startTs":null,"endTs":1694983477033,"stepType":"STEP_GROUP","status":"Skipped","failureInfo":{"message":"","failureTypeList":[],"responseMessages":[]},"skipInfo":null,"nodeRunInfo":{
+  "whenCondition": "\u003c+OnStageSuccess\u003e \u0026\u0026 (\u003c+infra.name\u003e !\u003d \u0027colima-k8s-infra\u0027)",
+  "evaluatedCondition": false,
+  "expressions": [{
+    "expression": "OnStageSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }, {
+    "expression": "infra.name",
+    "expressionValue": "colima-k8s-infra",
+    "count": 1
+  }]
+},"executableResponses":[],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfra/level4:spec/level5:execution/level6:steps/level7:_first_part"},"P2Wmdvw1R46Psm1-iTip-A":{"uuid":"P2Wmdvw1R46Psm1-iTip-A","setupId":"vBxpOX5wT1GFn-YUoV0Kgg","name":"run only on non colima","identifier":"ShellScript_1","baseFqn":"pipeline.stages.cd_dev_colimak8sinfralanes.spec.execution.steps._first_part.steps.ShellScript_1","outcomes":{"output":{"outputVariables":{"out":"reference"}}},"stepParameters":{"identifier":"ShellScript_1","name":"run only on non colima","timeout":"10m","when":{"stageStatus":"SUCCESS"},"type":"ShellScript","spec":{"outputVariables":{"out":"out"},"environmentVariables":{},"shell":"Bash","source":{"type":"Inline","spec":{"script":"echo \"deploying on dev - colima-k8s-infra-lanes-matrix\"\n\necho null\necho {\"key1\":\"value1\",\"cluster\":\"mac\"}\necho null\nsleep 30\nout=\"reference\""}},"onDelegate":true}},"startTs":1694983477563,"endTs":1694983519999,"stepType":"ShellScript","status":"Success","failureInfo":{"message":"","failureTypeList":[],"responseMessages":[]},"skipInfo":null,"nodeRunInfo":{
+  "whenCondition": "\u003c+OnStageSuccess\u003e",
+  "evaluatedCondition": true,
+  "expressions": [{
+    "expression": "OnStageSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }]
+},"executableResponses":[{
+  "task": {
+    "taskId": "wyKKk5KNSpyBCTGKJLs4rA-DEL",
+    "taskCategory": "DELEGATE_TASK_V2",
+    "logKeys": ["accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfralanes/level4:spec/level5:execution/level6:steps/level7:_first_part/level8:steps/level9:ShellScript_1-commandUnit:Execute"],
+    "units": [],
+    "taskName": "SHELL_SCRIPT_TASK_NG"
+  }
+}],"unitProgresses":[{
+  "unitName": "Execute",
+  "status": "SUCCESS",
+  "startTime": "1694983477831",
+  "endTime": "1694983507856"
+}],"progressData":{"unitProgresses":[{"unitName":"Execute","status":"RUNNING","startTime":"1694983477831"}]},"delegateInfoList":[{"id":"gsKsDxVmTtKRJtL6SRdxCg","name":"gcp-im-delegate","taskId":"wyKKk5KNSpyBCTGKJLs4rA-DEL","taskName":"SHELL_SCRIPT_TASK_NG"}],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfralanes/level4:spec/level5:execution/level6:steps/level7:_first_part/level8:steps/level9:ShellScript_1"},"08gsFqxjSb-2GOmSe3KdkQ":{"uuid":"08gsFqxjSb-2GOmSe3KdkQ","setupId":"teIjKnOtSteYdt4TmM6N0A","name":"3 2nd part","identifier":"part_2","baseFqn":"pipeline.stages.cd_dev_colimak8sinfra.spec.execution.steps.part_2","outcomes":{},"stepParameters":{"identifier":"part_2","name":"3 2nd part","when":{"stageStatus":"SUCCESS","condition":"colima-k8s-infra != 'colima-k8s-infra'"},"childNodeID":"teIjKnOtSteYdt4TmM6N0Asteps","variables":{}},"startTs":null,"endTs":1694983748523,"stepType":"STEP_GROUP","status":"Skipped","failureInfo":{"message":"","failureTypeList":[],"responseMessages":[]},"skipInfo":null,"nodeRunInfo":{
+  "whenCondition": "\u003c+OnStageSuccess\u003e \u0026\u0026 (\u003c+infra.name\u003e !\u003d \u0027colima-k8s-infra\u0027)",
+  "evaluatedCondition": false,
+  "expressions": [{
+    "expression": "OnStageSuccess",
+    "expressionValue": "false",
+    "count": 1
+  }, {
+    "expression": "infra.name",
+    "expressionValue": "colima-k8s-infra",
+    "count": 1
+  }]
+},"executableResponses":[],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfra/level4:spec/level5:execution/level6:steps/level7:part_2"},"5pHcZv_jQvqfc8C-dhIEbg":{"uuid":"5pHcZv_jQvqfc8C-dhIEbg","setupId":"RoaB4p9aSCWZVc_Um8jClA","name":"Infrastructure","identifier":"infrastructure","baseFqn":"pipeline.stages.cd_dev_colimak8sinfra.spec.infrastructure","outcomes":{"output":{"connectorRef":"account.colimak8s","namespace":"loren-dev","releaseName":"dummynginxk8ssvc-release","environment":{"name":"dev","identifier":"dev","description":"","type":"PreProduction","tags":{},"environmentRef":"dev","variables":{"envlevle":"test"}},"infrastructureKey":"dcf4bd1f19586ac65fecc72148ca54a1f30ea5b1","infraIdentifier":"colimak8sinfra","infraName":"colima-k8s-infra","name":"colima-k8s-infra","connector":{"name":"colima-k8s"},"tags":{"key1":"value1","cluster":"mac"}},"rollbackArtifact":{"connectorRef":"lorenharnessdockerhub","imagePath":"bitnami/nginx","tag":"latest","identifier":"primary","type":"DockerRegistry","primaryArtifact":true,"image":"index.docker.io/bitnami/nginx:latest","imagePullSecret":"<+imagePullSecret.primary>","label":{"org.opencontainers.image.title":"nginx","com.vmware.cp.artifact.flavor":"sha256:1e1b4657a77f0d47e9220f0c37b9bf7802581b93214fff7d1bd2364c8bf22e8e","org.opencontainers.image.base.name":"docker.io/bitnami/minideb:bullseye","org.opencontainers.image.ref.name":"1.25.2-debian-11-r27","org.opencontainers.image.vendor":"VMware, Inc.","org.opencontainers.image.licenses":"Apache-2.0","org.opencontainers.image.version":"1.25.2","org.opencontainers.image.created":"2023-09-15T11:59:56Z","org.opencontainers.image.description":"Application packaged by VMware, Inc"},"displayName":"Tag# latest","metadata":{"image":"index.docker.io/bitnami/nginx:latest","tag":"latest","SHAV2":"sha256:936a3904a07daf2a402648a3add67bdf9e062d345f9400791f992b8e6ae20be3","SHA":"sha256:6e20942bfc8f18fbf00a81ff11460bd638979e34a784893bfea4af0870a6a3c3","url":"https://index.docker.io/v1/bitnami/nginx/tags/latest"},"dockerConfigJsonSecret":"<+dockerConfigJsonSecret.primary>"}},"stepParameters":{"envRef":"dev","infraRef":"colimak8sinfra","infraInputs":"<+matrix.infraInputs>","deploymentType":"KUBERNETES"},"startTs":1694983476093,"endTs":1694983476410,"stepType":"INFRASTRUCTURE_TASKSTEP_V2","status":"Success","failureInfo":{"message":"","failureTypeList":[],"responseMessages":[]},"skipInfo":null,"nodeRunInfo":null,"executableResponses":[{
+  "async": {
+    "callbackIds": [],
+    "logKeys": ["accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfra/level4:spec/level5:infrastructure-commandUnit:Execute"],
+    "units": [],
+    "timeout": 0,
+    "status": "NO_OP"
+  }
+}],"unitProgresses":[{
+  "unitName": "Execute",
+  "status": "SUCCESS",
+  "startTime": "1694983476245",
+  "endTime": "1694983476306"
+}],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfra/level4:spec/level5:infrastructure"},"__ihVv56QWuGSu5HlHHsDQ":{"uuid":"__ihVv56QWuGSu5HlHHsDQ","setupId":"fu_BFidMStKyGPERIdM5lg","name":"Execution","identifier":"execution","baseFqn":"pipeline.stages.cd_dev_colimak8sinfra.spec.execution","outcomes":{},"stepParameters":{"childNodeId":"fu_BFidMStKyGPERIdM5lgsteps","logMessage":"Execution Element"},"startTs":1694983476726,"endTs":1694983748719,"stepType":"NG_SECTION_WITH_ROLLBACK_INFO","status":"Expired","failureInfo":{"message":"Please Check the timeout configuration on the step to extend the duration of the step","failureTypeList":["EXPIRED"],"responseMessages":[{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]}]},"skipInfo":null,"nodeRunInfo":null,"executableResponses":[{
+  "child": {
+    "childNodeId": "fu_BFidMStKyGPERIdM5lgsteps",
+    "logKeys": [],
+    "units": []
+  }
+}],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfra/level4:spec/level5:execution"},"DIGpEcI1TZas7yEZvb7aFg":{"uuid":"DIGpEcI1TZas7yEZvb7aFg","setupId":"fu_BFidMStKyGPERIdM5lg","name":"Execution","identifier":"execution","baseFqn":"pipeline.stages.cd_dev_colimak8sinfralanes.spec.execution","outcomes":{},"stepParameters":{"childNodeId":"fu_BFidMStKyGPERIdM5lgsteps","logMessage":"Execution Element"},"startTs":1694983477049,"endTs":1694983747956,"stepType":"NG_SECTION_WITH_ROLLBACK_INFO","status":"Expired","failureInfo":{"message":"Please Check the timeout configuration on the step to extend the duration of the step","failureTypeList":["EXPIRED"],"responseMessages":[{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]}]},"skipInfo":null,"nodeRunInfo":null,"executableResponses":[{
+  "child": {
+    "childNodeId": "fu_BFidMStKyGPERIdM5lgsteps",
+    "logKeys": [],
+    "units": []
+  }
+}],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfralanes/level4:spec/level5:execution"},"Z-spVy78SAqs5vKjkcx49w":{"uuid":"Z-spVy78SAqs5vKjkcx49w","setupId":"IFHe1PzLSnuCgxPENYkgHQ","name":"wait for 2 to finish","identifier":"ShellScript_5","baseFqn":"pipeline.stages.cd_dev_gcpinfra.spec.execution.steps.part_2.steps.ShellScript_5","outcomes":{},"stepParameters":{"identifier":"ShellScript_5","name":"wait for 2 to finish","timeout":"10m","type":"ShellScript","spec":{"outputVariables":{},"environmentVariables":{},"shell":"Bash","source":{"type":"Inline","spec":{"script":"while true; do\necho []\n  echo SUCCEEDED\n  echo SUCCEEDED\nsleep 5\n  done"}},"onDelegate":true}},"startTs":1694983519716,"endTs":1694983747457,"stepType":"ShellScript","status":"Expired","failureInfo":{"message":"Please Check the timeout configuration on the step to extend the duration of the step","failureTypeList":["EXPIRED"],"responseMessages":[{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]}]},"skipInfo":null,"nodeRunInfo":{
+  "whenCondition": "\u003c+OnStageSuccess\u003e",
+  "evaluatedCondition": true,
+  "expressions": [{
+    "expression": "OnStageSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }]
+},"executableResponses":[{
+  "task": {
+    "taskId": "E-00m_LXTvCGPMTvE-12zw-DEL",
+    "taskCategory": "DELEGATE_TASK_V2",
+    "logKeys": ["accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_gcpinfra/level4:spec/level5:execution/level6:steps/level7:part_2/level8:steps/level9:ShellScript_5-commandUnit:Execute"],
+    "units": [],
+    "taskName": "SHELL_SCRIPT_TASK_NG"
+  }
+}],"unitProgresses":[{
+  "unitName": "Execute",
+  "status": "EXPIRED",
+  "startTime": "1694983519976",
+  "endTime": "1694983747446"
+}],"progressData":{"unitProgresses":[{"unitName":"Execute","status":"RUNNING","startTime":"1694983519976"}]},"delegateInfoList":[{"id":"gsKsDxVmTtKRJtL6SRdxCg","name":"gcp-im-delegate","taskId":"E-00m_LXTvCGPMTvE-12zw-DEL","taskName":"SHELL_SCRIPT_TASK_NG"}],"interruptHistories":[{"interruptId":"L1KzNO18Q_G_N_DiNvsT3A","tookEffectAt":1694983747446,"interruptType":"EXPIRE_ALL","interruptConfig":{"issuedBy":{"issueTime":1694983746000,"manualIssuer":null,"adviserIssuer":null,"timeoutIssuer":{"timeoutInstanceId":"UvkyUzubRdiBTQ_GlUuIzA"},"triggerIssuer":null},"retryInterruptConfig":{"retryId":""}}},{"interruptId":"L1KzNO18Q_G_N_DiNvsT3A","tookEffectAt":1694983747637,"interruptType":"EXPIRE_ALL","interruptConfig":{"issuedBy":{"issueTime":1694983746000,"manualIssuer":null,"adviserIssuer":null,"timeoutIssuer":{"timeoutInstanceId":"UvkyUzubRdiBTQ_GlUuIzA"},"triggerIssuer":null},"retryInterruptConfig":{"retryId":""}}}],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_gcpinfra/level4:spec/level5:execution/level6:steps/level7:part_2/level8:steps/level9:ShellScript_5"},"_C428jw8Rlqz40PhSBa3fw":{"uuid":"_C428jw8Rlqz40PhSBa3fw","setupId":"vg6CAz87QgGQuXuhwFR9Zg","name":"1 first part","identifier":"_first_part","baseFqn":"pipeline.stages.cd_dev_colimak8sinfralanes.spec.execution.steps._first_part","outcomes":{},"stepParameters":{"identifier":"_first_part","name":"1 first part","when":{"stageStatus":"SUCCESS","condition":"colima-k8s-infra-lanes-matrix != 'colima-k8s-infra'"},"childNodeID":"vg6CAz87QgGQuXuhwFR9Zgsteps","variables":{}},"startTs":1694983477267,"endTs":1694983520159,"stepType":"STEP_GROUP","status":"Success","failureInfo":{"message":"","failureTypeList":[],"responseMessages":[]},"skipInfo":null,"nodeRunInfo":{
+  "whenCondition": "\u003c+OnStageSuccess\u003e \u0026\u0026 (\u003c+infra.name\u003e !\u003d \u0027colima-k8s-infra\u0027)",
+  "evaluatedCondition": true,
+  "expressions": [{
+    "expression": "OnStageSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }, {
+    "expression": "infra.name",
+    "expressionValue": "colima-k8s-infra-lanes-matrix",
+    "count": 1
+  }]
+},"executableResponses":[{
+  "child": {
+    "childNodeId": "vg6CAz87QgGQuXuhwFR9Zgsteps",
+    "logKeys": [],
+    "units": []
+  }
+}],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfralanes/level4:spec/level5:execution/level6:steps/level7:_first_part"},"krnYu5h5TQyC826HaJVdfw":{"uuid":"krnYu5h5TQyC826HaJVdfw","setupId":"JXkCHyGXQxmbMtxNZ2pBSw","name":"Resource Constraint","identifier":"rc-ibz8q816STaxIcPlTtyu5g","baseFqn":"pipeline.stages.cd_dev_gcpinfra.spec.rc-ibz8q816STaxIcPlTtyu5g","outcomes":{},"stepParameters":{"identifier":"rc-ibz8q816STaxIcPlTtyu5g","name":"Resource Constraint","timeout":"1w","when":{"stageStatus":"SUCCESS","condition":"false == \"true\""},"type":"ResourceConstraint","spec":{"name":"Queuing","resourceUnit":"2e69c2774624f862a243b4dea8240f472636302e","acquireMode":"ENSURE","permits":1,"holdingScope":"STAGE"}},"startTs":null,"endTs":1694983481580,"stepType":"ResourceConstraint","status":"Skipped","failureInfo":{"message":"","failureTypeList":[],"responseMessages":[]},"skipInfo":null,"nodeRunInfo":{
+  "whenCondition": "\u003c+OnStageSuccess\u003e \u0026\u0026 (\u003c+InfrastructureStepOutput.addRcStep\u003e \u003d\u003d \"true\")",
+  "evaluatedCondition": false,
+  "expressions": [{
+    "expression": "InfrastructureStepOutput.addRcStep",
+    "expressionValue": "false",
+    "count": 1
+  }, {
+    "expression": "OnStageSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }]
+},"executableResponses":[],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_gcpinfra/level4:spec/level5:rc-ibz8q816STaxIcPlTtyu5g"},"etb2MY8CTFmZXVymrEVIxg":{"uuid":"etb2MY8CTFmZXVymrEVIxg","setupId":"fiTXKqvTR1mzDAEh3sx9GQ","name":"cd_dev_gcpinfra","identifier":"cd_dev_gcpinfra","baseFqn":"pipeline.stages.cd_dev_gcpinfra","outcomes":{},"stepParameters":{"identifier":"cd_dev_gcpinfra","name":"cd_dev_gcpinfra","description":"","failureStrategies":[{"onFailure":{"errors":["ALL_ERRORS"],"action":{"type":"STAGE_ROLLBACK"}}}],"variables":{},"tags":{},"type":"Deployment","specConfig":{"childNodeID":"zDIgbdjHQ9-AngCulNqCaA"}},"startTs":1694983468030,"endTs":1694983748836,"stepType":"DEPLOYMENT_STAGE_STEP","status":"Expired","failureInfo":{"message":"Please Check the timeout configuration on the step to extend the duration of the step","failureTypeList":["EXPIRED"],"responseMessages":[{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]}]},"skipInfo":null,"nodeRunInfo":{
+  "whenCondition": "\u003c+OnPipelineSuccess\u003e",
+  "evaluatedCondition": true,
+  "expressions": [{
+    "expression": "OnPipelineSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }]
+},"executableResponses":[{
+  "child": {
+    "childNodeId": "zDIgbdjHQ9-AngCulNqCaA",
+    "logKeys": [],
+    "units": []
+  }
+}],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":{"currentiteration":2,"totaliterations":3,"matrixmetadata":{"matrixvalues":{"identifier":"gcpinfra","environmentRef":"dev"},"matrixcombination":[2],"subtype":"MULTI_ENV_DEPLOYMENT","matrixkeystoskipinname":["environmentInputs","serviceInputs","infraInputs"],"nodename":""},"identifierpostfix":""},"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_gcpinfra"},"otY7yQxcS06W6XJFBB45qA":{"uuid":"otY7yQxcS06W6XJFBB45qA","setupId":"vg6CAz87QgGQuXuhwFR9Zg","name":"1 first part","identifier":"_first_part","baseFqn":"pipeline.stages.cd_dev_gcpinfra.spec.execution.steps._first_part","outcomes":{},"stepParameters":{"identifier":"_first_part","name":"1 first part","when":{"stageStatus":"SUCCESS","condition":"gcp-k8s-infra != 'colima-k8s-infra'"},"childNodeID":"vg6CAz87QgGQuXuhwFR9Zgsteps","variables":{}},"startTs":1694983481853,"endTs":1694983519097,"stepType":"STEP_GROUP","status":"Success","failureInfo":{"message":"","failureTypeList":[],"responseMessages":[]},"skipInfo":null,"nodeRunInfo":{
+  "whenCondition": "\u003c+OnStageSuccess\u003e \u0026\u0026 (\u003c+infra.name\u003e !\u003d \u0027colima-k8s-infra\u0027)",
+  "evaluatedCondition": true,
+  "expressions": [{
+    "expression": "OnStageSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }, {
+    "expression": "infra.name",
+    "expressionValue": "gcp-k8s-infra",
+    "count": 1
+  }]
+},"executableResponses":[{
+  "child": {
+    "childNodeId": "vg6CAz87QgGQuXuhwFR9Zgsteps",
+    "logKeys": [],
+    "units": []
+  }
+}],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_gcpinfra/level4:spec/level5:execution/level6:steps/level7:_first_part"},"QsxR1-meRLWX6q0D20x0wg":{"uuid":"QsxR1-meRLWX6q0D20x0wg","setupId":"s71AupVkRW264H0Z2DrMuw","name":"2 run only on colima","identifier":"run_only_on_colima","baseFqn":"pipeline.stages.cd_dev_colimak8sinfralanes.spec.execution.steps.run_only_on_colima","outcomes":{},"stepParameters":{"identifier":"run_only_on_colima","name":"2 run only on colima","when":{"stageStatus":"SUCCESS","condition":"colima-k8s-infra-lanes-matrix == 'colima-k8s-infra'"},"childNodeID":"s71AupVkRW264H0Z2DrMuwsteps","variables":{}},"startTs":null,"endTs":1694983520318,"stepType":"STEP_GROUP","status":"Skipped","failureInfo":{"message":"","failureTypeList":[],"responseMessages":[]},"skipInfo":null,"nodeRunInfo":{
+  "whenCondition": "\u003c+OnStageSuccess\u003e \u0026\u0026 (\u003c+infra.name\u003e \u003d\u003d \u0027colima-k8s-infra\u0027)",
+  "evaluatedCondition": false,
+  "expressions": [{
+    "expression": "OnStageSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }, {
+    "expression": "infra.name",
+    "expressionValue": "colima-k8s-infra-lanes-matrix",
+    "count": 1
+  }]
+},"executableResponses":[],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfralanes/level4:spec/level5:execution/level6:steps/level7:run_only_on_colima"},"8KIL9leqQd2V-t2pY6advg":{"uuid":"8KIL9leqQd2V-t2pY6advg","setupId":"vkVeMcWRTJeO5dAixkrwCg","name":"Pipeline Rollback","identifier":"prb-XZ4TQmsoS8qbHE-k3ttlFA","baseFqn":"pipeline.stages.prb-XZ4TQmsoS8qbHE-k3ttlFA","outcomes":{},"stepParameters":null,"startTs":1694983749794,"endTs":1694984660867,"stepType":"PIPELINE_ROLLBACK_STAGE","status":"Success","failureInfo":{"message":"","failureTypeList":[],"responseMessages":[]},"skipInfo":null,"nodeRunInfo":null,"executableResponses":[{
+  "async": {
+    "callbackIds": ["2AmLJfEMRwC7dJwBuULdsw"],
+    "logKeys": [],
+    "units": [],
+    "timeout": 0,
+    "status": "NO_OP"
+  }
+}],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:prb-XZ4TQmsoS8qbHE-k3ttlFA"},"7pd_9HYBTNSE0293dHYNgA":{"uuid":"7pd_9HYBTNSE0293dHYNgA","setupId":"9WgyIDiCTHGYVKQ6tzfDlQ","name":"Service","identifier":"service","baseFqn":"pipeline.stages.cd_dev_gcpinfra.spec","outcomes":{"service":{"identifier":"dummynginxk8ssvc","name":"dummy-nginx-k8s-svc","type":"Kubernetes","gitOpsEnabled":false},"manifests":{"nginx":{"identifier":"nginx","type":"HelmChart","store":{"connectorRef":"bitnami_repo"},"chartName":"nginx","chartVersion":"","skipResourceVersioning":false,"enableDeclarativeRollback":false,"helmVersion":"V3","subChartPath":""}},"artifacts":{"primary":{"connectorRef":"lorenharnessdockerhub","imagePath":"bitnami/nginx","tag":"latest","identifier":"primary","type":"DockerRegistry","primaryArtifact":true,"image":"index.docker.io/bitnami/nginx:latest","imagePullSecret":"<+imagePullSecret.primary>","label":{"org.opencontainers.image.title":"nginx","com.vmware.cp.artifact.flavor":"sha256:1e1b4657a77f0d47e9220f0c37b9bf7802581b93214fff7d1bd2364c8bf22e8e","org.opencontainers.image.base.name":"docker.io/bitnami/minideb:bullseye","org.opencontainers.image.ref.name":"1.25.2-debian-11-r27","org.opencontainers.image.vendor":"VMware, Inc.","org.opencontainers.image.licenses":"Apache-2.0","org.opencontainers.image.version":"1.25.2","org.opencontainers.image.created":"2023-09-15T11:59:56Z","org.opencontainers.image.description":"Application packaged by VMware, Inc"},"displayName":"Tag# latest","metadata":{"image":"index.docker.io/bitnami/nginx:latest","tag":"latest","SHAV2":"sha256:936a3904a07daf2a402648a3add67bdf9e062d345f9400791f992b8e6ae20be3","SHA":"sha256:6e20942bfc8f18fbf00a81ff11460bd638979e34a784893bfea4af0870a6a3c3","url":"https://index.docker.io/v1/bitnami/nginx/tags/latest"},"dockerConfigJsonSecret":"<+dockerConfigJsonSecret.primary>"},"sidecars":{}}},"stepParameters":{"serviceRef":"dummynginxk8ssvc","inputs":{"serviceDefinition":{"type":"Kubernetes","spec":{"artifacts":{"primary":{"primaryArtifactRef":"dh","__uuid":"YmiTkOdcQWiDqcdDWnNjFQ"},"__uuid":"1feKh1PXTje2YSIJzApcDg"},"__uuid":"EJHf4ARcROeF-yw3GuOR3A"},"__uuid":"PznMTlT4Ti-gReBkC_0m7g"},"__uuid":"I2UCzG1HQj24VZIAJ3fB7A"},"envRef":"dev","infraId":"gcpinfra","envInputs":"<+matrix.environmentInputs>","serviceOverrideInputs":"<+matrix.serviceOverrideInputs>","childrenNodeIds":["artifacts-gzJtGJoGRtCaFSpAxNwYlA","manifests-_CntG46ZRxeoo5MNh9vU0g","configFiles-avJTZFAkSDuH_r44cmdWkA","hooks--Q2TQeRTRC6rzgIID2vXxw"],"deploymentType":"KUBERNETES"},"startTs":1694983468374,"endTs":1694983470956,"stepType":"SERVICE_V3","status":"Success","failureInfo":{"message":"","failureTypeList":[],"responseMessages":[]},"skipInfo":null,"nodeRunInfo":null,"executableResponses":[{
+  "children": {
+    "children": [{
+      "childNodeId": "artifacts-gzJtGJoGRtCaFSpAxNwYlA"
+    }, {
+      "childNodeId": "manifests-_CntG46ZRxeoo5MNh9vU0g"
+    }, {
+      "childNodeId": "configFiles-avJTZFAkSDuH_r44cmdWkA"
+    }, {
+      "childNodeId": "hooks--Q2TQeRTRC6rzgIID2vXxw"
+    }],
+    "maxConcurrency": "0",
+    "logKeys": ["accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_gcpinfra/level4:spec/level5:service-commandUnit:Service Step", "accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_gcpinfra/level4:spec/level5:service-commandUnit:Service Overrides"],
+    "shouldProceedIfFailed": false,
+    "units": ["Service Step", "Service Overrides"]
+  }
+}],"unitProgresses":[{
+  "unitName": "Service Overrides",
+  "status": "SUCCESS",
+  "startTime": "1694983468374",
+  "endTime": "1694983470900"
+},{
+  "unitName": "Service Step",
+  "status": "SUCCESS",
+  "startTime": "1694983468374",
+  "endTime": "1694983470874"
+}],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":{"Artifact Step":{"stepDelegateInfos":[{"taskId":"zABY_EU_R26d875IOAesRw-DEL","taskName":"Artifact Task: primary"}]}},"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_gcpinfra/level4:spec/level5:service"},"TQiVk8ENRU-w2NI_ds8ZUw":{"uuid":"TQiVk8ENRU-w2NI_ds8ZUw","setupId":"9WgyIDiCTHGYVKQ6tzfDlQ","name":"Service","identifier":"service","baseFqn":"pipeline.stages.cd_dev_colimak8sinfra.spec","outcomes":{"service":{"identifier":"dummynginxk8ssvc","name":"dummy-nginx-k8s-svc","type":"Kubernetes","gitOpsEnabled":false},"manifests":{"nginx":{"identifier":"nginx","type":"HelmChart","store":{"connectorRef":"bitnami_repo"},"chartName":"nginx","chartVersion":"","skipResourceVersioning":false,"enableDeclarativeRollback":false,"helmVersion":"V3","subChartPath":""}},"artifacts":{"primary":{"connectorRef":"lorenharnessdockerhub","imagePath":"bitnami/nginx","tag":"latest","identifier":"primary","type":"DockerRegistry","primaryArtifact":true,"image":"index.docker.io/bitnami/nginx:latest","imagePullSecret":"<+imagePullSecret.primary>","label":{"org.opencontainers.image.title":"nginx","com.vmware.cp.artifact.flavor":"sha256:1e1b4657a77f0d47e9220f0c37b9bf7802581b93214fff7d1bd2364c8bf22e8e","org.opencontainers.image.base.name":"docker.io/bitnami/minideb:bullseye","org.opencontainers.image.ref.name":"1.25.2-debian-11-r27","org.opencontainers.image.vendor":"VMware, Inc.","org.opencontainers.image.licenses":"Apache-2.0","org.opencontainers.image.version":"1.25.2","org.opencontainers.image.created":"2023-09-15T11:59:56Z","org.opencontainers.image.description":"Application packaged by VMware, Inc"},"displayName":"Tag# latest","metadata":{"image":"index.docker.io/bitnami/nginx:latest","tag":"latest","SHAV2":"sha256:936a3904a07daf2a402648a3add67bdf9e062d345f9400791f992b8e6ae20be3","SHA":"sha256:6e20942bfc8f18fbf00a81ff11460bd638979e34a784893bfea4af0870a6a3c3","url":"https://index.docker.io/v1/bitnami/nginx/tags/latest"},"dockerConfigJsonSecret":"<+dockerConfigJsonSecret.primary>"},"sidecars":{}}},"stepParameters":{"serviceRef":"dummynginxk8ssvc","inputs":{"serviceDefinition":{"type":"Kubernetes","spec":{"artifacts":{"primary":{"primaryArtifactRef":"dh","__uuid":"YmiTkOdcQWiDqcdDWnNjFQ"},"__uuid":"1feKh1PXTje2YSIJzApcDg"},"__uuid":"EJHf4ARcROeF-yw3GuOR3A"},"__uuid":"PznMTlT4Ti-gReBkC_0m7g"},"__uuid":"I2UCzG1HQj24VZIAJ3fB7A"},"envRef":"dev","infraId":"colimak8sinfra","envInputs":"<+matrix.environmentInputs>","serviceOverrideInputs":"<+matrix.serviceOverrideInputs>","childrenNodeIds":["artifacts-gzJtGJoGRtCaFSpAxNwYlA","manifests-_CntG46ZRxeoo5MNh9vU0g","configFiles-avJTZFAkSDuH_r44cmdWkA","hooks--Q2TQeRTRC6rzgIID2vXxw"],"deploymentType":"KUBERNETES"},"startTs":1694983467689,"endTs":1694983475995,"stepType":"SERVICE_V3","status":"Success","failureInfo":{"message":"","failureTypeList":[],"responseMessages":[]},"skipInfo":null,"nodeRunInfo":null,"executableResponses":[{
+  "children": {
+    "children": [{
+      "childNodeId": "artifacts-gzJtGJoGRtCaFSpAxNwYlA"
+    }, {
+      "childNodeId": "manifests-_CntG46ZRxeoo5MNh9vU0g"
+    }, {
+      "childNodeId": "configFiles-avJTZFAkSDuH_r44cmdWkA"
+    }, {
+      "childNodeId": "hooks--Q2TQeRTRC6rzgIID2vXxw"
+    }],
+    "maxConcurrency": "0",
+    "logKeys": ["accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfra/level4:spec/level5:service-commandUnit:Service Step", "accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfra/level4:spec/level5:service-commandUnit:Service Overrides"],
+    "shouldProceedIfFailed": false,
+    "units": ["Service Step", "Service Overrides"]
+  }
+}],"unitProgresses":[{
+  "unitName": "Service Overrides",
+  "status": "SUCCESS",
+  "startTime": "1694983467689",
+  "endTime": "1694983475929"
+},{
+  "unitName": "Service Step",
+  "status": "SUCCESS",
+  "startTime": "1694983467689",
+  "endTime": "1694983475905"
+}],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":{"Artifact Step":{"stepDelegateInfos":[{"taskId":"2YNR-NUaTQuULwPJcr1LhA-DEL","taskName":"Artifact Task: primary"}]}},"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfra/level4:spec/level5:service"},"Sww2tiGFQeqJrg9JztquzA":{"uuid":"Sww2tiGFQeqJrg9JztquzA","setupId":"pn_VyjoCQFC-1J3Rv5bIkQ","name":"wait for 1 to finish on other infra","identifier":"wait_for_1_to_finish","baseFqn":"pipeline.stages.cd_dev_colimak8sinfra.spec.execution.steps.run_only_on_colima.steps.wait_for_1_to_finish","outcomes":{},"stepParameters":{"identifier":"wait_for_1_to_finish","name":"wait for 1 to finish on other infra","timeout":"10m","failureStrategies":[{"onFailure":{"errors":["ALL_ERRORS"],"action":{"type":"PIPELINE_ROLLBACK"}}}],"type":"ShellScript","spec":{"outputVariables":{},"environmentVariables":{},"shell":"Bash","source":{"type":"Inline","spec":{"script":"microdnf install jq\nwhile true; do\necho [\"RUNNING\",null,\"SKIPPED\"]\n\n# echo RUNNING\n# echo null\necho \"colima lanes:\"RUNNING\necho \"colima:\"SKIPPED\necho \"gcp:\"null\n\necho \"colima lanes step:\"QUEUED\necho \"colima step:\"null\necho \"gcp step:\"null\n\nt='{\"stepInputs\":{\"environments\":{\"values\":[{\"uuid\":\"4n1-439hS-6yZqyBLk9YHg\",\"environmentRef\":\"dev\",\"filters\":[{\"uuid\":\"yCzuDpG2RxqoGQ8buJCWsQ\",\"identifier\":\"filter\",\"type\":\"tags\",\"entities\":[\"infrastructures\"],\"spec\":{\"matchType\":\"any\",\"tags\":{\"__recast\":\"java.util.LinkedHashMap\",\"key1\":\"value1\",\"key2\":\"value2\"}}}]}],\"environmentsMetadata\":{\"parallel\":true}},\"childNodeId\":\"fiTXKqvTR1mzDAEh3sx9GQ\",\"strategyType\":\"MATRIX\",\"subType\":\"MULTI_SERVICE_ENV_DEPLOYMENT\",\"serviceYamlV2\":{\"serviceRef\":\"dummynginxk8ssvc\",\"serviceInputs\":{\"serviceDefinition\":{\"type\":\"Kubernetes\",\"spec\":{\"artifacts\":{\"primary\":{\"primaryArtifactRef\":\"dh\",\"__uuid\":\"YmiTkOdcQWiDqcdDWnNjFQ\"},\"__uuid\":\"1feKh1PXTje2YSIJzApcDg\"},\"__uuid\":\"EJHf4ARcROeF-yw3GuOR3A\"},\"__uuid\":\"PznMTlT4Ti-gReBkC_0m7g\"},\"__uuid\":\"I2UCzG1HQj24VZIAJ3fB7A\"}},\"deploymentType\":\"KUBERNETES\"},\"status\":\"RUNNING\",\"cd_dev_colimak8sinfralanes\":{\"identifierPostFix\":\"_dev_colimak8sinfralanes\",\"iteration\":\"1\",\"iterations\":\"3\",\"matrix\":{\"identifier\":\"colimak8sinfralanes\",\"environmentRef\":\"dev\"},\"repeat\":{},\"stepInputs\":{\"identifier\":\"cd_dev_colimak8sinfralanes\",\"name\":\"cd_dev_colimak8sinfralanes\",\"description\":\"\",\"failureStrategies\":[{\"onFailure\":{\"errors\":[\"ALL_ERRORS\"],\"action\":{\"type\":\"STAGE_ROLLBACK\"}}}],\"variables\":{},\"tags\":{},\"type\":\"Deployment\",\"specConfig\":{\"childNodeID\":\"zDIgbdjHQ9-AngCulNqCaA\"}},\"totalIterations\":\"3\",\"status\":\"RUNNING\",\"spec\":{\"stepInputs\":{\"childNodeId\":\"9WgyIDiCTHGYVKQ6tzfDlQ\",\"logMessage\":\"Spec Element\"},\"status\":\"RUNNING\",\"infrastructure\":{\"stepInputs\":{\"envRef\":\"dev\",\"infraRef\":\"colimak8sinfralanes\",\"infraInputs\":\"<+matrix.infraInputs>\",\"deploymentType\":\"KUBERNETES\"},\"status\":\"SUCCEEDED\",\"outcome\":{\"output\":{\"connectorRef\":\"account.colimak8s\",\"namespace\":\"loren-dev\",\"releaseName\":\"<+serviceVariables.release>\",\"environment\":{\"name\":\"dev\",\"identifier\":\"dev\",\"description\":\"\",\"type\":\"PreProduction\",\"tags\":{},\"environmentRef\":\"dev\",\"variables\":{\"envlevle\":\"test\"}},\"infrastructureKey\":\"dcf4bd1f19586ac65fecc72148ca54a1f30ea5b1\",\"infraIdentifier\":\"colimak8sinfralanes\",\"infraName\":\"colima-k8s-infra-lanes-matrix\",\"name\":\"colima-k8s-infra-lanes-matrix\",\"connector\":{\"name\":\"colima-k8s\"},\"tags\":{\"key1\":\"value1\",\"cluster\":\"mac\"}}}},\"rc-ibz8q816STaxIcPlTtyu5g\":{\"stepInputs\":{\"identifier\":\"rc-ibz8q816STaxIcPlTtyu5g\",\"name\":\"Resource Constraint\",\"timeout\":\"1w\",\"when\":{\"stageStatus\":\"SUCCESS\",\"condition\":\"false == \\\"true\\\"\"},\"type\":\"ResourceConstraint\",\"spec\":{\"name\":\"Queuing\",\"resourceUnit\":\"dcf4bd1f19586ac65fecc72148ca54a1f30ea5b1\",\"acquireMode\":\"ENSURE\",\"permits\":1,\"holdingScope\":\"STAGE\"}},\"status\":\"SKIPPED\"},\"execution\":{\"stepInputs\":{\"childNodeId\":\"fu_BFidMStKyGPERIdM5lgsteps\",\"logMessage\":\"Execution Element\"},\"status\":\"RUNNING\",\"steps\":{\"stepInputs\":{\"childNodeId\":\"vg6CAz87QgGQuXuhwFR9Zg\"},\"status\":\"RUNNING\",\"_first_part\":{\"stepInputs\":{\"identifier\":\"_first_part\",\"name\":\"1 first part\",\"when\":{\"stageStatus\":\"SUCCESS\",\"condition\":\"colima-k8s-infra-lanes-matrix != 'colima-k8s-infra'\"},\"childNodeID\":\"vg6CAz87QgGQuXuhwFR9Zgsteps\",\"variables\":{}},\"status\":\"RUNNING\",\"steps\":{\"stepInputs\":{\"childNodeId\":\"vBxpOX5wT1GFn-YUoV0Kgg\"},\"status\":\"RUNNING\",\"ShellScript_1\":{\"stepInputs\":{\"identifier\":\"ShellScript_1\",\"name\":\"run only on non colima\",\"timeout\":\"10m\",\"when\":{\"stageStatus\":\"SUCCESS\"},\"type\":\"ShellScript\",\"spec\":{\"outputVariables\":{\"out\":\"out\"},\"environmentVariables\":{},\"secretOutputVariables\":[],\"shell\":\"Bash\",\"source\":{\"type\":\"Inline\",\"spec\":{\"script\":\"echo \\\"deploying on dev - colima-k8s-infra-lanes-matrix\\\"\\n\\necho null\\necho {\\\"key1\\\":\\\"value1\\\",\\\"cluster\\\":\\\"mac\\\"}\\necho null\\nsleep 30\\nout=\\\"reference\\\"\"}},\"onDelegate\":true}},\"status\":\"TASK_WAITING\"}}}}}},\"outcome\":{\"service\":{\"identifier\":\"dummynginxk8ssvc\",\"name\":\"dummy-nginx-k8s-svc\",\"type\":\"Kubernetes\",\"gitOpsEnabled\":false},\"manifests\":{\"nginx\":{\"identifier\":\"nginx\",\"type\":\"HelmChart\",\"store\":{\"connectorRef\":\"bitnami_repo\"},\"chartName\":\"nginx\",\"chartVersion\":\"\",\"skipResourceVersioning\":false,\"enableDeclarativeRollback\":false,\"helmVersion\":\"V3\",\"subChartPath\":\"\"}},\"artifacts\":{\"primary\":{\"connectorRef\":\"lorenharnessdockerhub\",\"imagePath\":\"bitnami/nginx\",\"tag\":\"latest\",\"identifier\":\"primary\",\"type\":\"DockerRegistry\",\"primaryArtifact\":true,\"image\":\"index.docker.io/bitnami/nginx:latest\",\"imagePullSecret\":\"<+imagePullSecret.primary>\",\"label\":{\"org.opencontainers.image.title\":\"nginx\",\"com.vmware.cp.artifact.flavor\":\"sha256:1e1b4657a77f0d47e9220f0c37b9bf7802581b93214fff7d1bd2364c8bf22e8e\",\"org.opencontainers.image.base.name\":\"docker.io/bitnami/minideb:bullseye\",\"org.opencontainers.image.ref.name\":\"1.25.2-debian-11-r27\",\"org.opencontainers.image.vendor\":\"VMware, Inc.\",\"org.opencontainers.image.licenses\":\"Apache-2.0\",\"org.opencontainers.image.version\":\"1.25.2\",\"org.opencontainers.image.created\":\"2023-09-15T11:59:56Z\",\"org.opencontainers.image.description\":\"Application packaged by VMware, Inc\"},\"displayName\":\"Tag# latest\",\"metadata\":{\"image\":\"index.docker.io/bitnami/nginx:latest\",\"tag\":\"latest\",\"SHAV2\":\"sha256:936a3904a07daf2a402648a3add67bdf9e062d345f9400791f992b8e6ae20be3\",\"SHA\":\"sha256:6e20942bfc8f18fbf00a81ff11460bd638979e34a784893bfea4af0870a6a3c3\",\"url\":\"https://index.docker.io/v1/bitnami/nginx/tags/latest\"},\"dockerConfigJsonSecret\":\"<+dockerConfigJsonSecret.primary>\"},\"sidecars\":{}},\"rollbackArtifact\":{\"connectorRef\":\"lorenharnessdockerhub\",\"imagePath\":\"bitnami/nginx\",\"tag\":\"latest\",\"identifier\":\"primary\",\"type\":\"DockerRegistry\",\"primaryArtifact\":true,\"image\":\"index.docker.io/bitnami/nginx:latest\",\"imagePullSecret\":\"<+imagePullSecret.primary>\",\"label\":{\"org.opencontainers.image.title\":\"nginx\",\"com.vmware.cp.artifact.flavor\":\"sha256:1e1b4657a77f0d47e9220f0c37b9bf7802581b93214fff7d1bd2364c8bf22e8e\",\"org.opencontainers.image.base.name\":\"docker.io/bitnami/minideb:bullseye\",\"org.opencontainers.image.ref.name\":\"1.25.2-debian-11-r27\",\"org.opencontainers.image.vendor\":\"VMware, Inc.\",\"org.opencontainers.image.licenses\":\"Apache-2.0\",\"org.opencontainers.image.version\":\"1.25.2\",\"org.opencontainers.image.created\":\"2023-09-15T11:59:56Z\",\"org.opencontainers.image.description\":\"Application packaged by VMware, Inc\"},\"displayName\":\"Tag# latest\",\"metadata\":{\"image\":\"index.docker.io/bitnami/nginx:latest\",\"tag\":\"latest\",\"SHAV2\":\"sha256:936a3904a07daf2a402648a3add67bdf9e062d345f9400791f992b8e6ae20be3\",\"SHA\":\"sha256:6e20942bfc8f18fbf00a81ff11460bd638979e34a784893bfea4af0870a6a3c3\",\"url\":\"https://index.docker.io/v1/bitnami/nginx/tags/latest\"},\"dockerConfigJsonSecret\":\"<+dockerConfigJsonSecret.primary>\"}}},\"cd_dev_gcpinfra\":{\"identifierPostFix\":\"_dev_gcpinfra\",\"iteration\":\"2\",\"iterations\":\"3\",\"matrix\":{\"identifier\":\"gcpinfra\",\"environmentRef\":\"dev\"},\"repeat\":{},\"stepInputs\":{\"identifier\":\"cd_dev_gcpinfra\",\"name\":\"cd_dev_gcpinfra\",\"description\":\"\",\"failureStrategies\":[{\"onFailure\":{\"errors\":[\"ALL_ERRORS\"],\"action\":{\"type\":\"STAGE_ROLLBACK\"}}}],\"variables\":{},\"tags\":{},\"type\":\"Deployment\",\"specConfig\":{\"childNodeID\":\"zDIgbdjHQ9-AngCulNqCaA\"}},\"totalIterations\":\"3\",\"status\":\"RUNNING\",\"spec\":{\"stepInputs\":{\"childNodeId\":\"9WgyIDiCTHGYVKQ6tzfDlQ\",\"logMessage\":\"Spec Element\"},\"status\":\"RUNNING\",\"infrastructure\":{\"stepInputs\":{\"envRef\":\"dev\",\"infraRef\":\"gcpinfra\",\"infraInputs\":\"<+matrix.infraInputs>\",\"deploymentType\":\"KUBERNETES\"},\"status\":\"SUCCEEDED\",\"outcome\":{\"output\":{\"connectorRef\":\"account.sagcpk8s\",\"namespace\":\"loren-dev\",\"releaseName\":\"dummy-nginx-k8s-svc\",\"environment\":{\"name\":\"dev\",\"identifier\":\"dev\",\"description\":\"\",\"type\":\"PreProduction\",\"tags\":{},\"environmentRef\":\"dev\",\"variables\":{\"envlevle\":\"test\"}},\"infrastructureKey\":\"2e69c2774624f862a243b4dea8240f472636302e\",\"infraIdentifier\":\"gcpinfra\",\"infraName\":\"gcp-k8s-infra\",\"name\":\"gcp-k8s-infra\",\"connector\":{\"name\":\"sa-gcp-k8s\"},\"tags\":{\"key2\":\"value2\",\"cluster\":\"gcp\"}}}}},\"outcome\":{\"service\":{\"identifier\":\"dummynginxk8ssvc\",\"name\":\"dummy-nginx-k8s-svc\",\"type\":\"Kubernetes\",\"gitOpsEnabled\":false},\"manifests\":{\"nginx\":{\"identifier\":\"nginx\",\"type\":\"HelmChart\",\"store\":{\"connectorRef\":\"bitnami_repo\"},\"chartName\":\"nginx\",\"chartVersion\":\"\",\"skipResourceVersioning\":false,\"enableDeclarativeRollback\":false,\"helmVersion\":\"V3\",\"subChartPath\":\"\"}},\"artifacts\":{\"primary\":{\"connectorRef\":\"lorenharnessdockerhub\",\"imagePath\":\"bitnami/nginx\",\"tag\":\"latest\",\"identifier\":\"primary\",\"type\":\"DockerRegistry\",\"primaryArtifact\":true,\"image\":\"index.docker.io/bitnami/nginx:latest\",\"imagePullSecret\":\"<+imagePullSecret.primary>\",\"label\":{\"org.opencontainers.image.title\":\"nginx\",\"com.vmware.cp.artifact.flavor\":\"sha256:1e1b4657a77f0d47e9220f0c37b9bf7802581b93214fff7d1bd2364c8bf22e8e\",\"org.opencontainers.image.base.name\":\"docker.io/bitnami/minideb:bullseye\",\"org.opencontainers.image.ref.name\":\"1.25.2-debian-11-r27\",\"org.opencontainers.image.vendor\":\"VMware, Inc.\",\"org.opencontainers.image.licenses\":\"Apache-2.0\",\"org.opencontainers.image.version\":\"1.25.2\",\"org.opencontainers.image.created\":\"2023-09-15T11:59:56Z\",\"org.opencontainers.image.description\":\"Application packaged by VMware, Inc\"},\"displayName\":\"Tag# latest\",\"metadata\":{\"image\":\"index.docker.io/bitnami/nginx:latest\",\"tag\":\"latest\",\"SHAV2\":\"sha256:936a3904a07daf2a402648a3add67bdf9e062d345f9400791f992b8e6ae20be3\",\"SHA\":\"sha256:6e20942bfc8f18fbf00a81ff11460bd638979e34a784893bfea4af0870a6a3c3\",\"url\":\"https://index.docker.io/v1/bitnami/nginx/tags/latest\"},\"dockerConfigJsonSecret\":\"<+dockerConfigJsonSecret.primary>\"},\"sidecars\":{}},\"rollbackArtifact\":{\"connectorRef\":\"lorenharnessdockerhub\",\"imagePath\":\"bitnami/nginx\",\"tag\":\"latest\",\"identifier\":\"primary\",\"type\":\"DockerRegistry\",\"primaryArtifact\":true,\"image\":\"index.docker.io/bitnami/nginx:latest\",\"imagePullSecret\":\"<+imagePullSecret.primary>\",\"label\":{\"org.opencontainers.image.title\":\"nginx\",\"com.vmware.cp.artifact.flavor\":\"sha256:1e1b4657a77f0d47e9220f0c37b9bf7802581b93214fff7d1bd2364c8bf22e8e\",\"org.opencontainers.image.base.name\":\"docker.io/bitnami/minideb:bullseye\",\"org.opencontainers.image.ref.name\":\"1.25.2-debian-11-r27\",\"org.opencontainers.image.vendor\":\"VMware, Inc.\",\"org.opencontainers.image.licenses\":\"Apache-2.0\",\"org.opencontainers.image.version\":\"1.25.2\",\"org.opencontainers.image.created\":\"2023-09-15T11:59:56Z\",\"org.opencontainers.image.description\":\"Application packaged by VMware, Inc\"},\"displayName\":\"Tag# latest\",\"metadata\":{\"image\":\"index.docker.io/bitnami/nginx:latest\",\"tag\":\"latest\",\"SHAV2\":\"sha256:936a3904a07daf2a402648a3add67bdf9e062d345f9400791f992b8e6ae20be3\",\"SHA\":\"sha256:6e20942bfc8f18fbf00a81ff11460bd638979e34a784893bfea4af0870a6a3c3\",\"url\":\"https://index.docker.io/v1/bitnami/nginx/tags/latest\"},\"dockerConfigJsonSecret\":\"<+dockerConfigJsonSecret.primary>\"}}},\"cd_dev_colimak8sinfra\":{\"identifierPostFix\":\"_dev_colimak8sinfra\",\"iteration\":\"0\",\"iterations\":\"3\",\"matrix\":{\"identifier\":\"colimak8sinfra\",\"environmentRef\":\"dev\"},\"repeat\":{},\"stepInputs\":{\"identifier\":\"cd_dev_colimak8sinfra\",\"name\":\"cd_dev_colimak8sinfra\",\"description\":\"\",\"failureStrategies\":[{\"onFailure\":{\"errors\":[\"ALL_ERRORS\"],\"action\":{\"type\":\"STAGE_ROLLBACK\"}}}],\"variables\":{},\"tags\":{},\"type\":\"Deployment\",\"specConfig\":{\"childNodeID\":\"zDIgbdjHQ9-AngCulNqCaA\"}},\"totalIterations\":\"3\",\"status\":\"RUNNING\",\"spec\":{\"stepInputs\":{\"childNodeId\":\"9WgyIDiCTHGYVKQ6tzfDlQ\",\"logMessage\":\"Spec Element\"},\"status\":\"RUNNING\",\"infrastructure\":{\"stepInputs\":{\"envRef\":\"dev\",\"infraRef\":\"colimak8sinfra\",\"infraInputs\":\"<+matrix.infraInputs>\",\"deploymentType\":\"KUBERNETES\"},\"status\":\"SUCCEEDED\",\"outcome\":{\"output\":{\"connectorRef\":\"account.colimak8s\",\"namespace\":\"loren-dev\",\"releaseName\":\"dummynginxk8ssvc-release\",\"environment\":{\"name\":\"dev\",\"identifier\":\"dev\",\"description\":\"\",\"type\":\"PreProduction\",\"tags\":{},\"environmentRef\":\"dev\",\"variables\":{\"envlevle\":\"test\"}},\"infrastructureKey\":\"dcf4bd1f19586ac65fecc72148ca54a1f30ea5b1\",\"infraIdentifier\":\"colimak8sinfra\",\"infraName\":\"colima-k8s-infra\",\"name\":\"colima-k8s-infra\",\"connector\":{\"name\":\"colima-k8s\"},\"tags\":{\"key1\":\"value1\",\"cluster\":\"mac\"}}}},\"rc-ibz8q816STaxIcPlTtyu5g\":{\"stepInputs\":{\"identifier\":\"rc-ibz8q816STaxIcPlTtyu5g\",\"name\":\"Resource Constraint\",\"timeout\":\"1w\",\"when\":{\"stageStatus\":\"SUCCESS\",\"condition\":\"true == \\\"true\\\"\"},\"type\":\"ResourceConstraint\",\"spec\":{\"name\":\"Queuing\",\"resourceUnit\":\"dcf4bd1f19586ac65fecc72148ca54a1f30ea5b1\",\"acquireMode\":\"ENSURE\",\"permits\":1,\"holdingScope\":\"STAGE\"}},\"status\":\"SUCCEEDED\",\"outcome\":{\"output\":{\"name\":\"Queuing\",\"capacity\":1,\"resourceUnit\":\"dcf4bd1f19586ac65fecc72148ca54a1f30ea5b1\",\"usage\":1,\"alreadyAcquiredPermits\":1}}},\"execution\":{\"stepInputs\":{\"childNodeId\":\"fu_BFidMStKyGPERIdM5lgsteps\",\"logMessage\":\"Execution Element\"},\"status\":\"RUNNING\",\"steps\":{\"stepInputs\":{\"childNodeId\":\"vg6CAz87QgGQuXuhwFR9Zg\"},\"status\":\"RUNNING\",\"_first_part\":{\"stepInputs\":{\"identifier\":\"_first_part\",\"name\":\"1 first part\",\"when\":{\"stageStatus\":\"SUCCESS\",\"condition\":\"colima-k8s-infra != 'colima-k8s-infra'\"},\"childNodeID\":\"vg6CAz87QgGQuXuhwFR9Zgsteps\",\"variables\":{}},\"status\":\"SKIPPED\"},\"run_only_on_colima\":{\"stepInputs\":{\"identifier\":\"run_only_on_colima\",\"name\":\"2 run only on colima\",\"when\":{\"stageStatus\":\"SUCCESS\",\"condition\":\"colima-k8s-infra == 'colima-k8s-infra'\"},\"childNodeID\":\"s71AupVkRW264H0Z2DrMuwsteps\",\"variables\":{}},\"status\":\"RUNNING\",\"steps\":{\"stepInputs\":{\"childNodeId\":\"pn_VyjoCQFC-1J3Rv5bIkQ\"},\"status\":\"RUNNING\"}}}}},\"outcome\":{\"service\":{\"identifier\":\"dummynginxk8ssvc\",\"name\":\"dummy-nginx-k8s-svc\",\"type\":\"Kubernetes\",\"gitOpsEnabled\":false},\"manifests\":{\"nginx\":{\"identifier\":\"nginx\",\"type\":\"HelmChart\",\"store\":{\"connectorRef\":\"bitnami_repo\"},\"chartName\":\"nginx\",\"chartVersion\":\"\",\"skipResourceVersioning\":false,\"enableDeclarativeRollback\":false,\"helmVersion\":\"V3\",\"subChartPath\":\"\"}},\"artifacts\":{\"primary\":{\"connectorRef\":\"lorenharnessdockerhub\",\"imagePath\":\"bitnami/nginx\",\"tag\":\"latest\",\"identifier\":\"primary\",\"type\":\"DockerRegistry\",\"primaryArtifact\":true,\"image\":\"index.docker.io/bitnami/nginx:latest\",\"imagePullSecret\":\"<+imagePullSecret.primary>\",\"label\":{\"org.opencontainers.image.title\":\"nginx\",\"com.vmware.cp.artifact.flavor\":\"sha256:1e1b4657a77f0d47e9220f0c37b9bf7802581b93214fff7d1bd2364c8bf22e8e\",\"org.opencontainers.image.base.name\":\"docker.io/bitnami/minideb:bullseye\",\"org.opencontainers.image.ref.name\":\"1.25.2-debian-11-r27\",\"org.opencontainers.image.vendor\":\"VMware, Inc.\",\"org.opencontainers.image.licenses\":\"Apache-2.0\",\"org.opencontainers.image.version\":\"1.25.2\",\"org.opencontainers.image.created\":\"2023-09-15T11:59:56Z\",\"org.opencontainers.image.description\":\"Application packaged by VMware, Inc\"},\"displayName\":\"Tag# latest\",\"metadata\":{\"image\":\"index.docker.io/bitnami/nginx:latest\",\"tag\":\"latest\",\"SHAV2\":\"sha256:936a3904a07daf2a402648a3add67bdf9e062d345f9400791f992b8e6ae20be3\",\"SHA\":\"sha256:6e20942bfc8f18fbf00a81ff11460bd638979e34a784893bfea4af0870a6a3c3\",\"url\":\"https://index.docker.io/v1/bitnami/nginx/tags/latest\"},\"dockerConfigJsonSecret\":\"<+dockerConfigJsonSecret.primary>\"},\"sidecars\":{}},\"rollbackArtifact\":{\"connectorRef\":\"lorenharnessdockerhub\",\"imagePath\":\"bitnami/nginx\",\"tag\":\"latest\",\"identifier\":\"primary\",\"type\":\"DockerRegistry\",\"primaryArtifact\":true,\"image\":\"index.docker.io/bitnami/nginx:latest\",\"imagePullSecret\":\"<+imagePullSecret.primary>\",\"label\":{\"org.opencontainers.image.title\":\"nginx\",\"com.vmware.cp.artifact.flavor\":\"sha256:1e1b4657a77f0d47e9220f0c37b9bf7802581b93214fff7d1bd2364c8bf22e8e\",\"org.opencontainers.image.base.name\":\"docker.io/bitnami/minideb:bullseye\",\"org.opencontainers.image.ref.name\":\"1.25.2-debian-11-r27\",\"org.opencontainers.image.vendor\":\"VMware, Inc.\",\"org.opencontainers.image.licenses\":\"Apache-2.0\",\"org.opencontainers.image.version\":\"1.25.2\",\"org.opencontainers.image.created\":\"2023-09-15T11:59:56Z\",\"org.opencontainers.image.description\":\"Application packaged by VMware, Inc\"},\"displayName\":\"Tag# latest\",\"metadata\":{\"image\":\"index.docker.io/bitnami/nginx:latest\",\"tag\":\"latest\",\"SHAV2\":\"sha256:936a3904a07daf2a402648a3add67bdf9e062d345f9400791f992b8e6ae20be3\",\"SHA\":\"sha256:6e20942bfc8f18fbf00a81ff11460bd638979e34a784893bfea4af0870a6a3c3\",\"url\":\"https://index.docker.io/v1/bitnami/nginx/tags/latest\"},\"dockerConfigJsonSecret\":\"<+dockerConfigJsonSecret.primary>\"}}}}'\necho $t | jq '(. | to_entries[] | select(.key | startswith(\"cd\")) | .value.spec.execution.steps._first_part.status)'\nsleep 5\n  done"}},"onDelegate":true}},"startTs":1694983478254,"endTs":1694983747434,"stepType":"ShellScript","status":"Expired","failureInfo":{"message":"Please Check the timeout configuration on the step to extend the duration of the step","failureTypeList":["EXPIRED"],"responseMessages":[{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]}]},"skipInfo":null,"nodeRunInfo":{
+  "whenCondition": "\u003c+OnStageSuccess\u003e",
+  "evaluatedCondition": true,
+  "expressions": [{
+    "expression": "OnStageSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }]
+},"executableResponses":[{
+  "task": {
+    "taskId": "TtstR6WvT_auLthh-PkHhg-DEL",
+    "taskCategory": "DELEGATE_TASK_V2",
+    "logKeys": ["accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfra/level4:spec/level5:execution/level6:steps/level7:run_only_on_colima/level8:steps/level9:wait_for_1_to_finish-commandUnit:Execute"],
+    "units": [],
+    "taskName": "SHELL_SCRIPT_TASK_NG"
+  }
+}],"unitProgresses":[{
+  "unitName": "Execute",
+  "status": "EXPIRED",
+  "startTime": "1694983477582",
+  "endTime": "1694983747425"
+}],"progressData":{"unitProgresses":[{"unitName":"Execute","status":"RUNNING","startTime":"1694983477582"}]},"delegateInfoList":[{"id":"abjZgawOTNCPekHFWyBHtA","name":"colima-im-delegate","taskId":"TtstR6WvT_auLthh-PkHhg-DEL","taskName":"SHELL_SCRIPT_TASK_NG"}],"interruptHistories":[{"interruptId":"L1KzNO18Q_G_N_DiNvsT3A","tookEffectAt":1694983747426,"interruptType":"EXPIRE_ALL","interruptConfig":{"issuedBy":{"issueTime":1694983746000,"manualIssuer":null,"adviserIssuer":null,"timeoutIssuer":{"timeoutInstanceId":"UvkyUzubRdiBTQ_GlUuIzA"},"triggerIssuer":null},"retryInterruptConfig":{"retryId":""}}},{"interruptId":"L1KzNO18Q_G_N_DiNvsT3A","tookEffectAt":1694983747480,"interruptType":"EXPIRE_ALL","interruptConfig":{"issuedBy":{"issueTime":1694983746000,"manualIssuer":null,"adviserIssuer":null,"timeoutIssuer":{"timeoutInstanceId":"UvkyUzubRdiBTQ_GlUuIzA"},"triggerIssuer":null},"retryInterruptConfig":{"retryId":""}}}],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfra/level4:spec/level5:execution/level6:steps/level7:run_only_on_colima/level8:steps/level9:wait_for_1_to_finish"},"j9-SwGI8S26n6pP8Dbkiww":{"uuid":"j9-SwGI8S26n6pP8Dbkiww","setupId":"fiTXKqvTR1mzDAEh3sx9GQ","name":"cd_dev_colimak8sinfralanes","identifier":"cd_dev_colimak8sinfralanes","baseFqn":"pipeline.stages.cd_dev_colimak8sinfralanes","outcomes":{},"stepParameters":{"identifier":"cd_dev_colimak8sinfralanes","name":"cd_dev_colimak8sinfralanes","description":"","failureStrategies":[{"onFailure":{"errors":["ALL_ERRORS"],"action":{"type":"STAGE_ROLLBACK"}}}],"variables":{},"tags":{},"type":"Deployment","specConfig":{"childNodeID":"zDIgbdjHQ9-AngCulNqCaA"}},"startTs":1694983467482,"endTs":1694983748124,"stepType":"DEPLOYMENT_STAGE_STEP","status":"Expired","failureInfo":{"message":"Please Check the timeout configuration on the step to extend the duration of the step","failureTypeList":["EXPIRED"],"responseMessages":[{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]}]},"skipInfo":null,"nodeRunInfo":{
+  "whenCondition": "\u003c+OnPipelineSuccess\u003e",
+  "evaluatedCondition": true,
+  "expressions": [{
+    "expression": "OnPipelineSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }]
+},"executableResponses":[{
+  "child": {
+    "childNodeId": "zDIgbdjHQ9-AngCulNqCaA",
+    "logKeys": [],
+    "units": []
+  }
+}],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":{"currentiteration":1,"totaliterations":3,"matrixmetadata":{"matrixvalues":{"identifier":"colimak8sinfralanes","environmentRef":"dev"},"matrixcombination":[1],"subtype":"MULTI_ENV_DEPLOYMENT","matrixkeystoskipinname":["environmentInputs","serviceInputs","infraInputs"],"nodename":""},"identifierpostfix":""},"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfralanes"},"gkscVVTBRc2yA0C4W_etRg":{"uuid":"gkscVVTBRc2yA0C4W_etRg","setupId":"teIjKnOtSteYdt4TmM6N0A","name":"3 2nd part","identifier":"part_2","baseFqn":"pipeline.stages.cd_dev_colimak8sinfralanes.spec.execution.steps.part_2","outcomes":{},"stepParameters":{"identifier":"part_2","name":"3 2nd part","when":{"stageStatus":"SUCCESS","condition":"colima-k8s-infra-lanes-matrix != 'colima-k8s-infra'"},"childNodeID":"teIjKnOtSteYdt4TmM6N0Asteps","variables":{}},"startTs":1694983520463,"endTs":1694983747659,"stepType":"STEP_GROUP","status":"Expired","failureInfo":{"message":"Please Check the timeout configuration on the step to extend the duration of the step","failureTypeList":["EXPIRED"],"responseMessages":[{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]}]},"skipInfo":null,"nodeRunInfo":{
+  "whenCondition": "\u003c+OnStageSuccess\u003e \u0026\u0026 (\u003c+infra.name\u003e !\u003d \u0027colima-k8s-infra\u0027)",
+  "evaluatedCondition": true,
+  "expressions": [{
+    "expression": "OnStageSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }, {
+    "expression": "infra.name",
+    "expressionValue": "colima-k8s-infra-lanes-matrix",
+    "count": 1
+  }]
+},"executableResponses":[{
+  "child": {
+    "childNodeId": "teIjKnOtSteYdt4TmM6N0Asteps",
+    "logKeys": [],
+    "units": []
+  }
+}],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfralanes/level4:spec/level5:execution/level6:steps/level7:part_2"},"pJaFcqD9RracTxEeQN3jKA":{"uuid":"pJaFcqD9RracTxEeQN3jKA","setupId":"9WgyIDiCTHGYVKQ6tzfDlQ","name":"Service","identifier":"service","baseFqn":"pipeline.stages.cd_dev_colimak8sinfralanes.spec","outcomes":{"service":{"identifier":"dummynginxk8ssvc","name":"dummy-nginx-k8s-svc","type":"Kubernetes","gitOpsEnabled":false},"manifests":{"nginx":{"identifier":"nginx","type":"HelmChart","store":{"connectorRef":"bitnami_repo"},"chartName":"nginx","chartVersion":"","skipResourceVersioning":false,"enableDeclarativeRollback":false,"helmVersion":"V3","subChartPath":""}},"artifacts":{"primary":{"connectorRef":"lorenharnessdockerhub","imagePath":"bitnami/nginx","tag":"latest","identifier":"primary","type":"DockerRegistry","primaryArtifact":true,"image":"index.docker.io/bitnami/nginx:latest","imagePullSecret":"<+imagePullSecret.primary>","label":{"org.opencontainers.image.title":"nginx","com.vmware.cp.artifact.flavor":"sha256:1e1b4657a77f0d47e9220f0c37b9bf7802581b93214fff7d1bd2364c8bf22e8e","org.opencontainers.image.base.name":"docker.io/bitnami/minideb:bullseye","org.opencontainers.image.ref.name":"1.25.2-debian-11-r27","org.opencontainers.image.vendor":"VMware, Inc.","org.opencontainers.image.licenses":"Apache-2.0","org.opencontainers.image.version":"1.25.2","org.opencontainers.image.created":"2023-09-15T11:59:56Z","org.opencontainers.image.description":"Application packaged by VMware, Inc"},"displayName":"Tag# latest","metadata":{"image":"index.docker.io/bitnami/nginx:latest","tag":"latest","SHAV2":"sha256:936a3904a07daf2a402648a3add67bdf9e062d345f9400791f992b8e6ae20be3","SHA":"sha256:6e20942bfc8f18fbf00a81ff11460bd638979e34a784893bfea4af0870a6a3c3","url":"https://index.docker.io/v1/bitnami/nginx/tags/latest"},"dockerConfigJsonSecret":"<+dockerConfigJsonSecret.primary>"},"sidecars":{}}},"stepParameters":{"serviceRef":"dummynginxk8ssvc","inputs":{"serviceDefinition":{"type":"Kubernetes","spec":{"artifacts":{"primary":{"primaryArtifactRef":"dh","__uuid":"YmiTkOdcQWiDqcdDWnNjFQ"},"__uuid":"1feKh1PXTje2YSIJzApcDg"},"__uuid":"EJHf4ARcROeF-yw3GuOR3A"},"__uuid":"PznMTlT4Ti-gReBkC_0m7g"},"__uuid":"I2UCzG1HQj24VZIAJ3fB7A"},"envRef":"dev","infraId":"colimak8sinfralanes","envInputs":"<+matrix.environmentInputs>","serviceOverrideInputs":"<+matrix.serviceOverrideInputs>","childrenNodeIds":["artifacts-gzJtGJoGRtCaFSpAxNwYlA","manifests-_CntG46ZRxeoo5MNh9vU0g","configFiles-avJTZFAkSDuH_r44cmdWkA","hooks--Q2TQeRTRC6rzgIID2vXxw"],"deploymentType":"KUBERNETES"},"startTs":1694983467677,"endTs":1694983476365,"stepType":"SERVICE_V3","status":"Success","failureInfo":{"message":"","failureTypeList":[],"responseMessages":[]},"skipInfo":null,"nodeRunInfo":null,"executableResponses":[{
+  "children": {
+    "children": [{
+      "childNodeId": "artifacts-gzJtGJoGRtCaFSpAxNwYlA"
+    }, {
+      "childNodeId": "manifests-_CntG46ZRxeoo5MNh9vU0g"
+    }, {
+      "childNodeId": "configFiles-avJTZFAkSDuH_r44cmdWkA"
+    }, {
+      "childNodeId": "hooks--Q2TQeRTRC6rzgIID2vXxw"
+    }],
+    "maxConcurrency": "0",
+    "logKeys": ["accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfralanes/level4:spec/level5:service-commandUnit:Service Step", "accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfralanes/level4:spec/level5:service-commandUnit:Service Overrides"],
+    "shouldProceedIfFailed": false,
+    "units": ["Service Step", "Service Overrides"]
+  }
+}],"unitProgresses":[{
+  "unitName": "Service Overrides",
+  "status": "SUCCESS",
+  "startTime": "1694983467677",
+  "endTime": "1694983476256"
+},{
+  "unitName": "Service Step",
+  "status": "SUCCESS",
+  "startTime": "1694983467677",
+  "endTime": "1694983476231"
+}],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":{"Artifact Step":{"stepDelegateInfos":[{"taskId":"caQXpujTRligro9OpiDRxg-DEL","taskName":"Artifact Task: primary"}]}},"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfralanes/level4:spec/level5:service"},"dwzYlu0ISu6C4DvHzjs0cQ":{"uuid":"dwzYlu0ISu6C4DvHzjs0cQ","setupId":"Qe0IfGP-StaIXB7HxLfA_A","name":"cd","identifier":"cd","baseFqn":"pipeline.stages","outcomes":{},"stepParameters":{"environments":{"values":[{"uuid":"4n1-439hS-6yZqyBLk9YHg","environmentRef":"dev","filters":[{"uuid":"yCzuDpG2RxqoGQ8buJCWsQ","identifier":"filter","type":"tags","entities":["infrastructures"],"spec":{"matchType":"any","tags":{"__recast":"java.util.LinkedHashMap","key1":"value1","key2":"value2"}}}]}],"environmentsMetadata":{"parallel":true}},"childNodeId":"fiTXKqvTR1mzDAEh3sx9GQ","strategyType":"MATRIX","subType":"MULTI_SERVICE_ENV_DEPLOYMENT","serviceYamlV2":{"serviceRef":"dummynginxk8ssvc","serviceInputs":{"serviceDefinition":{"type":"Kubernetes","spec":{"artifacts":{"primary":{"primaryArtifactRef":"dh","__uuid":"YmiTkOdcQWiDqcdDWnNjFQ"},"__uuid":"1feKh1PXTje2YSIJzApcDg"},"__uuid":"EJHf4ARcROeF-yw3GuOR3A"},"__uuid":"PznMTlT4Ti-gReBkC_0m7g"},"__uuid":"I2UCzG1HQj24VZIAJ3fB7A"}},"deploymentType":"KUBERNETES"},"startTs":1694983467290,"endTs":1694983749761,"stepType":"multiDeployment","status":"Expired","failureInfo":{"message":"Please Check the timeout configuration on the step to extend the duration of the step","failureTypeList":["EXPIRED"],"responseMessages":[{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]},{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]},{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]}]},"skipInfo":null,"nodeRunInfo":null,"executableResponses":[{
+  "children": {
+    "children": [{
+      "childNodeId": "fiTXKqvTR1mzDAEh3sx9GQ",
+      "strategyMetadata": {
+        "currentIteration": 0,
+        "totalIterations": 3,
+        "matrixMetadata": {
+          "matrixValues": {
+            "identifier": "colimak8sinfra",
+            "environmentRef": "dev"
+          },
+          "matrixCombination": [0],
+          "subType": "MULTI_ENV_DEPLOYMENT",
+          "matrixKeysToSkipInName": ["environmentInputs", "serviceInputs", "infraInputs"],
+          "nodeName": ""
+        },
+        "identifierPostFix": ""
+      }
+    }, {
+      "childNodeId": "fiTXKqvTR1mzDAEh3sx9GQ",
+      "strategyMetadata": {
+        "currentIteration": 1,
+        "totalIterations": 3,
+        "matrixMetadata": {
+          "matrixValues": {
+            "identifier": "colimak8sinfralanes",
+            "environmentRef": "dev"
+          },
+          "matrixCombination": [1],
+          "subType": "MULTI_ENV_DEPLOYMENT",
+          "matrixKeysToSkipInName": ["environmentInputs", "serviceInputs", "infraInputs"],
+          "nodeName": ""
+        },
+        "identifierPostFix": ""
+      }
+    }, {
+      "childNodeId": "fiTXKqvTR1mzDAEh3sx9GQ",
+      "strategyMetadata": {
+        "currentIteration": 2,
+        "totalIterations": 3,
+        "matrixMetadata": {
+          "matrixValues": {
+            "identifier": "gcpinfra",
+            "environmentRef": "dev"
+          },
+          "matrixCombination": [2],
+          "subType": "MULTI_ENV_DEPLOYMENT",
+          "matrixKeysToSkipInName": ["environmentInputs", "serviceInputs", "infraInputs"],
+          "nodeName": ""
+        },
+        "identifierPostFix": ""
+      }
+    }],
+    "maxConcurrency": "0",
+    "logKeys": [],
+    "shouldProceedIfFailed": false,
+    "units": []
+  }
+}],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":{"svcEnvCount":{"svcCount":1,"envCount":1}},"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd"},"79cUF_w7RLqOWHoDOzGLFw":{"uuid":"79cUF_w7RLqOWHoDOzGLFw","setupId":"fiTXKqvTR1mzDAEh3sx9GQ","name":"cd_dev_colimak8sinfra","identifier":"cd_dev_colimak8sinfra","baseFqn":"pipeline.stages.cd_dev_colimak8sinfra","outcomes":{},"stepParameters":{"identifier":"cd_dev_colimak8sinfra","name":"cd_dev_colimak8sinfra","description":"","failureStrategies":[{"onFailure":{"errors":["ALL_ERRORS"],"action":{"type":"STAGE_ROLLBACK"}}}],"variables":{},"tags":{},"type":"Deployment","specConfig":{"childNodeID":"zDIgbdjHQ9-AngCulNqCaA"}},"startTs":1694983467490,"endTs":1694983749017,"stepType":"DEPLOYMENT_STAGE_STEP","status":"Expired","failureInfo":{"message":"Please Check the timeout configuration on the step to extend the duration of the step","failureTypeList":["EXPIRED"],"responseMessages":[{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]}]},"skipInfo":null,"nodeRunInfo":{
+  "whenCondition": "\u003c+OnPipelineSuccess\u003e",
+  "evaluatedCondition": true,
+  "expressions": [{
+    "expression": "OnPipelineSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }]
+},"executableResponses":[{
+  "child": {
+    "childNodeId": "zDIgbdjHQ9-AngCulNqCaA",
+    "logKeys": [],
+    "units": []
+  }
+}],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":{"currentiteration":0,"totaliterations":3,"matrixmetadata":{"matrixvalues":{"identifier":"colimak8sinfra","environmentRef":"dev"},"matrixcombination":[0],"subtype":"MULTI_ENV_DEPLOYMENT","matrixkeystoskipinname":["environmentInputs","serviceInputs","infraInputs"],"nodename":""},"identifierpostfix":""},"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfra"},"2EGk5ysWRxOnra3Knbyr-g":{"uuid":"2EGk5ysWRxOnra3Knbyr-g","setupId":"s71AupVkRW264H0Z2DrMuw","name":"2 run only on colima","identifier":"run_only_on_colima","baseFqn":"pipeline.stages.cd_dev_colimak8sinfra.spec.execution.steps.run_only_on_colima","outcomes":{},"stepParameters":{"identifier":"run_only_on_colima","name":"2 run only on colima","when":{"stageStatus":"SUCCESS","condition":"colima-k8s-infra == 'colima-k8s-infra'"},"childNodeID":"s71AupVkRW264H0Z2DrMuwsteps","variables":{}},"startTs":1694983477189,"endTs":1694983748370,"stepType":"STEP_GROUP","status":"Expired","failureInfo":{"message":"Please Check the timeout configuration on the step to extend the duration of the step","failureTypeList":["EXPIRED"],"responseMessages":[{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]}]},"skipInfo":null,"nodeRunInfo":{
+  "whenCondition": "\u003c+OnStageSuccess\u003e \u0026\u0026 (\u003c+infra.name\u003e \u003d\u003d \u0027colima-k8s-infra\u0027)",
+  "evaluatedCondition": true,
+  "expressions": [{
+    "expression": "OnStageSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }, {
+    "expression": "infra.name",
+    "expressionValue": "colima-k8s-infra",
+    "count": 1
+  }]
+},"executableResponses":[{
+  "child": {
+    "childNodeId": "s71AupVkRW264H0Z2DrMuwsteps",
+    "logKeys": [],
+    "units": []
+  }
+}],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfra/level4:spec/level5:execution/level6:steps/level7:run_only_on_colima"},"4eGsIRS7ThuuMqdii7HlTQ":{"uuid":"4eGsIRS7ThuuMqdii7HlTQ","setupId":"s71AupVkRW264H0Z2DrMuw","name":"2 run only on colima","identifier":"run_only_on_colima","baseFqn":"pipeline.stages.cd_dev_gcpinfra.spec.execution.steps.run_only_on_colima","outcomes":{},"stepParameters":{"identifier":"run_only_on_colima","name":"2 run only on colima","when":{"stageStatus":"SUCCESS","condition":"gcp-k8s-infra == 'colima-k8s-infra'"},"childNodeID":"s71AupVkRW264H0Z2DrMuwsteps","variables":{}},"startTs":null,"endTs":1694983519250,"stepType":"STEP_GROUP","status":"Skipped","failureInfo":{"message":"","failureTypeList":[],"responseMessages":[]},"skipInfo":null,"nodeRunInfo":{
+  "whenCondition": "\u003c+OnStageSuccess\u003e \u0026\u0026 (\u003c+infra.name\u003e \u003d\u003d \u0027colima-k8s-infra\u0027)",
+  "evaluatedCondition": false,
+  "expressions": [{
+    "expression": "OnStageSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }, {
+    "expression": "infra.name",
+    "expressionValue": "gcp-k8s-infra",
+    "count": 1
+  }]
+},"executableResponses":[],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_gcpinfra/level4:spec/level5:execution/level6:steps/level7:run_only_on_colima"},"Kx1N1Zx_TvuG6vw3UBRrmA":{"uuid":"Kx1N1Zx_TvuG6vw3UBRrmA","setupId":"khiTppObT4SL_CCVoPwXpA","name":"cd - filtered list","identifier":"pipeline","baseFqn":"pipeline","outcomes":{},"stepParameters":{"childNodeID":"khiTppObT4SL_CCVoPwXpAstages","name":"cd - filtered list","identifier":"cd_filtered_list","flowControl":{"barriers":[{"identifier":"barrier1","name":"barrier1"}]},"description":"curl -X POST -H 'content-type: application/json' https://app.harness.io/gateway/pipeline/api/webhook/custom/lLUKczfnTTOMlheqJAZ_Vg/v3\\?accountIdentifier\\=WqS38aeyQjayoqy6mzwceA\\&orgIdentifier\\=default\\&projectIdentifier\\=technical_exercise\\&pipelineIdentifier\\=cd_filtered_list\\&triggerIdentifier\\=trigger -d '{\"tag\":{\"key1\":\"value1\",\"cluster\":\"mac\"}}'","tags":{"13":"","14":"","22":"","cd":"","key 1 then key 2 order":""},"properties":{},"variables":{},"executionId":"6rbxRpzGS6WrsvvAJROFzg"},"startTs":1694983446859,"endTs":1694984660962,"stepType":"PIPELINE_SECTION","status":"Expired","failureInfo":{"message":"Please Check the timeout configuration on the step to extend the duration of the step","failureTypeList":["EXPIRED"],"responseMessages":[{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]},{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]},{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]}]},"skipInfo":null,"nodeRunInfo":null,"executableResponses":[{
+  "child": {
+    "childNodeId": "khiTppObT4SL_CCVoPwXpAstages",
+    "logKeys": [],
+    "units": []
+  }
+}],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline"},"8QMywx7wQU-6eVFkCVfx0g":{"uuid":"8QMywx7wQU-6eVFkCVfx0g","setupId":"JXkCHyGXQxmbMtxNZ2pBSw","name":"Resource Constraint","identifier":"rc-ibz8q816STaxIcPlTtyu5g","baseFqn":"pipeline.stages.cd_dev_colimak8sinfra.spec.rc-ibz8q816STaxIcPlTtyu5g","outcomes":{"output":{"name":"Queuing","capacity":1,"resourceUnit":"dcf4bd1f19586ac65fecc72148ca54a1f30ea5b1","usage":1,"alreadyAcquiredPermits":1}},"stepParameters":{"identifier":"rc-ibz8q816STaxIcPlTtyu5g","name":"Resource Constraint","timeout":"1w","when":{"stageStatus":"SUCCESS","condition":"true == \"true\""},"type":"ResourceConstraint","spec":{"name":"Queuing","resourceUnit":"dcf4bd1f19586ac65fecc72148ca54a1f30ea5b1","acquireMode":"ENSURE","permits":1,"holdingScope":"STAGE"}},"startTs":1694983476599,"endTs":1694983476680,"stepType":"ResourceConstraint","status":"Success","failureInfo":{"message":"","failureTypeList":[],"responseMessages":[]},"skipInfo":null,"nodeRunInfo":{
+  "whenCondition": "\u003c+OnStageSuccess\u003e \u0026\u0026 (\u003c+InfrastructureStepOutput.addRcStep\u003e \u003d\u003d \"true\")",
+  "evaluatedCondition": true,
+  "expressions": [{
+    "expression": "InfrastructureStepOutput.addRcStep",
+    "expressionValue": "true",
+    "count": 1
+  }, {
+    "expression": "OnStageSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }]
+},"executableResponses":[{
+  "sync": {
+    "logKeys": ["accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfra/level4:spec/level5:rc-ibz8q816STaxIcPlTtyu5g"],
+    "units": []
+  }
+}],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfra/level4:spec/level5:rc-ibz8q816STaxIcPlTtyu5g"},"YzkCX1z9QqG3t1YDf7nd9Q":{"uuid":"YzkCX1z9QqG3t1YDf7nd9Q","setupId":"vBxpOX5wT1GFn-YUoV0Kgg","name":"run only on non colima","identifier":"ShellScript_1","baseFqn":"pipeline.stages.cd_dev_gcpinfra.spec.execution.steps._first_part.steps.ShellScript_1","outcomes":{"output":{"outputVariables":{"out":"reference"}}},"stepParameters":{"identifier":"ShellScript_1","name":"run only on non colima","timeout":"10m","when":{"stageStatus":"SUCCESS"},"type":"ShellScript","spec":{"outputVariables":{"out":"out"},"environmentVariables":{},"shell":"Bash","source":{"type":"Inline","spec":{"script":"echo \"deploying on dev - gcp-k8s-infra\"\n\necho null\necho {\"key2\":\"value2\",\"cluster\":\"gcp\"}\necho null\nsleep 30\nout=\"reference\""}},"onDelegate":true}},"startTs":1694983482120,"endTs":1694983513826,"stepType":"ShellScript","status":"Success","failureInfo":{"message":"","failureTypeList":[],"responseMessages":[]},"skipInfo":null,"nodeRunInfo":{
+  "whenCondition": "\u003c+OnStageSuccess\u003e",
+  "evaluatedCondition": true,
+  "expressions": [{
+    "expression": "OnStageSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }]
+},"executableResponses":[{
+  "task": {
+    "taskId": "xm0GF5IcTVauXIWqB71NpA-DEL",
+    "taskCategory": "DELEGATE_TASK_V2",
+    "logKeys": ["accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_gcpinfra/level4:spec/level5:execution/level6:steps/level7:_first_part/level8:steps/level9:ShellScript_1-commandUnit:Execute"],
+    "units": [],
+    "taskName": "SHELL_SCRIPT_TASK_NG"
+  }
+}],"unitProgresses":[{
+  "unitName": "Execute",
+  "status": "SUCCESS",
+  "startTime": "1694983481389",
+  "endTime": "1694983511400"
+}],"progressData":{"unitProgresses":[{"unitName":"Execute","status":"RUNNING","startTime":"1694983481389"}]},"delegateInfoList":[{"id":"abjZgawOTNCPekHFWyBHtA","name":"colima-im-delegate","taskId":"xm0GF5IcTVauXIWqB71NpA-DEL","taskName":"SHELL_SCRIPT_TASK_NG"}],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_gcpinfra/level4:spec/level5:execution/level6:steps/level7:_first_part/level8:steps/level9:ShellScript_1"},"0OcUKsHsSV2HUfdjjyK4yA":{"uuid":"0OcUKsHsSV2HUfdjjyK4yA","setupId":"RoaB4p9aSCWZVc_Um8jClA","name":"Infrastructure","identifier":"infrastructure","baseFqn":"pipeline.stages.cd_dev_gcpinfra.spec.infrastructure","outcomes":{"output":{"connectorRef":"account.sagcpk8s","namespace":"loren-dev","releaseName":"dummy-nginx-k8s-svc","environment":{"name":"dev","identifier":"dev","description":"","type":"PreProduction","tags":{},"environmentRef":"dev","variables":{"envlevle":"test"}},"infrastructureKey":"2e69c2774624f862a243b4dea8240f472636302e","infraIdentifier":"gcpinfra","infraName":"gcp-k8s-infra","name":"gcp-k8s-infra","connector":{"name":"sa-gcp-k8s"},"tags":{"key2":"value2","cluster":"gcp"}},"rollbackArtifact":{"connectorRef":"lorenharnessdockerhub","imagePath":"bitnami/nginx","tag":"latest","identifier":"primary","type":"DockerRegistry","primaryArtifact":true,"image":"index.docker.io/bitnami/nginx:latest","imagePullSecret":"<+imagePullSecret.primary>","label":{"org.opencontainers.image.title":"nginx","com.vmware.cp.artifact.flavor":"sha256:1e1b4657a77f0d47e9220f0c37b9bf7802581b93214fff7d1bd2364c8bf22e8e","org.opencontainers.image.base.name":"docker.io/bitnami/minideb:bullseye","org.opencontainers.image.ref.name":"1.25.2-debian-11-r27","org.opencontainers.image.vendor":"VMware, Inc.","org.opencontainers.image.licenses":"Apache-2.0","org.opencontainers.image.version":"1.25.2","org.opencontainers.image.created":"2023-09-15T11:59:56Z","org.opencontainers.image.description":"Application packaged by VMware, Inc"},"displayName":"Tag# latest","metadata":{"image":"index.docker.io/bitnami/nginx:latest","tag":"latest","SHAV2":"sha256:936a3904a07daf2a402648a3add67bdf9e062d345f9400791f992b8e6ae20be3","SHA":"sha256:6e20942bfc8f18fbf00a81ff11460bd638979e34a784893bfea4af0870a6a3c3","url":"https://index.docker.io/v1/bitnami/nginx/tags/latest"},"dockerConfigJsonSecret":"<+dockerConfigJsonSecret.primary>"}},"stepParameters":{"envRef":"dev","infraRef":"gcpinfra","infraInputs":"<+matrix.infraInputs>","deploymentType":"KUBERNETES"},"startTs":1694983471064,"endTs":1694983481433,"stepType":"INFRASTRUCTURE_TASKSTEP_V2","status":"Success","failureInfo":{"message":"","failureTypeList":[],"responseMessages":[]},"skipInfo":null,"nodeRunInfo":null,"executableResponses":[{
+  "async": {
+    "callbackIds": [],
+    "logKeys": ["accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_gcpinfra/level4:spec/level5:infrastructure-commandUnit:Execute"],
+    "units": [],
+    "timeout": 0,
+    "status": "NO_OP"
+  }
+}],"unitProgresses":[{
+  "unitName": "Execute",
+  "status": "SUCCESS",
+  "startTime": "1694983471215",
+  "endTime": "1694983471264"
+}],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_gcpinfra/level4:spec/level5:infrastructure"},"VWmYJUzrSW2FUE1Zeuke1Q":{"uuid":"VWmYJUzrSW2FUE1Zeuke1Q","setupId":"khiTppObT4SL_CCVoPwXpAstages","name":"stages","identifier":"stages","baseFqn":"pipeline.stages","outcomes":{},"stepParameters":{"childNodeId":"Qe0IfGP-StaIXB7HxLfA_A","logMessage":"Stages"},"startTs":1694983457150,"endTs":1694984660918,"stepType":"STAGES_STEP","status":"Expired","failureInfo":{"message":"Please Check the timeout configuration on the step to extend the duration of the step","failureTypeList":["EXPIRED"],"responseMessages":[{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]},{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]},{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]}]},"skipInfo":null,"nodeRunInfo":null,"executableResponses":[{
+  "child": {
+    "childNodeId": "Qe0IfGP-StaIXB7HxLfA_A",
+    "logKeys": [],
+    "units": []
+  }
+}],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages"},"D04Uvr1kTKSDuIVNWeWptw":{"uuid":"D04Uvr1kTKSDuIVNWeWptw","setupId":"fu_BFidMStKyGPERIdM5lg","name":"Execution","identifier":"execution","baseFqn":"pipeline.stages.cd_dev_gcpinfra.spec.execution","outcomes":{},"stepParameters":{"childNodeId":"fu_BFidMStKyGPERIdM5lgsteps","logMessage":"Execution Element"},"startTs":1694983481623,"endTs":1694983748673,"stepType":"NG_SECTION_WITH_ROLLBACK_INFO","status":"Expired","failureInfo":{"message":"Please Check the timeout configuration on the step to extend the duration of the step","failureTypeList":["EXPIRED"],"responseMessages":[{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]}]},"skipInfo":null,"nodeRunInfo":null,"executableResponses":[{
+  "child": {
+    "childNodeId": "fu_BFidMStKyGPERIdM5lgsteps",
+    "logKeys": [],
+    "units": []
+  }
+}],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_gcpinfra/level4:spec/level5:execution"},"ZCvogZs-T6-34JAElQAOxQ":{"uuid":"ZCvogZs-T6-34JAElQAOxQ","setupId":"RoaB4p9aSCWZVc_Um8jClA","name":"Infrastructure","identifier":"infrastructure","baseFqn":"pipeline.stages.cd_dev_colimak8sinfralanes.spec.infrastructure","outcomes":{"output":{"connectorRef":"account.colimak8s","namespace":"loren-dev","releaseName":"<+serviceVariables.release>","environment":{"name":"dev","identifier":"dev","description":"","type":"PreProduction","tags":{},"environmentRef":"dev","variables":{"envlevle":"test"}},"infrastructureKey":"dcf4bd1f19586ac65fecc72148ca54a1f30ea5b1","infraIdentifier":"colimak8sinfralanes","infraName":"colima-k8s-infra-lanes-matrix","name":"colima-k8s-infra-lanes-matrix","connector":{"name":"colima-k8s"},"tags":{"key1":"value1","cluster":"mac"}},"rollbackArtifact":{"connectorRef":"lorenharnessdockerhub","imagePath":"bitnami/nginx","tag":"latest","identifier":"primary","type":"DockerRegistry","primaryArtifact":true,"image":"index.docker.io/bitnami/nginx:latest","imagePullSecret":"<+imagePullSecret.primary>","label":{"org.opencontainers.image.title":"nginx","com.vmware.cp.artifact.flavor":"sha256:1e1b4657a77f0d47e9220f0c37b9bf7802581b93214fff7d1bd2364c8bf22e8e","org.opencontainers.image.base.name":"docker.io/bitnami/minideb:bullseye","org.opencontainers.image.ref.name":"1.25.2-debian-11-r27","org.opencontainers.image.vendor":"VMware, Inc.","org.opencontainers.image.licenses":"Apache-2.0","org.opencontainers.image.version":"1.25.2","org.opencontainers.image.created":"2023-09-15T11:59:56Z","org.opencontainers.image.description":"Application packaged by VMware, Inc"},"displayName":"Tag# latest","metadata":{"image":"index.docker.io/bitnami/nginx:latest","tag":"latest","SHAV2":"sha256:936a3904a07daf2a402648a3add67bdf9e062d345f9400791f992b8e6ae20be3","SHA":"sha256:6e20942bfc8f18fbf00a81ff11460bd638979e34a784893bfea4af0870a6a3c3","url":"https://index.docker.io/v1/bitnami/nginx/tags/latest"},"dockerConfigJsonSecret":"<+dockerConfigJsonSecret.primary>"}},"stepParameters":{"envRef":"dev","infraRef":"colimak8sinfralanes","infraInputs":"<+matrix.infraInputs>","deploymentType":"KUBERNETES"},"startTs":1694983476467,"endTs":1694983476846,"stepType":"INFRASTRUCTURE_TASKSTEP_V2","status":"Success","failureInfo":{"message":"","failureTypeList":[],"responseMessages":[]},"skipInfo":null,"nodeRunInfo":null,"executableResponses":[{
+  "async": {
+    "callbackIds": [],
+    "logKeys": ["accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfralanes/level4:spec/level5:infrastructure-commandUnit:Execute"],
+    "units": [],
+    "timeout": 0,
+    "status": "NO_OP"
+  }
+}],"unitProgresses":[{
+  "unitName": "Execute",
+  "status": "SUCCESS",
+  "startTime": "1694983476662",
+  "endTime": "1694983476712"
+}],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfralanes/level4:spec/level5:infrastructure"},"Ywbvnga_S6GVSUZdU5mLWw":{"uuid":"Ywbvnga_S6GVSUZdU5mLWw","setupId":"JXkCHyGXQxmbMtxNZ2pBSw","name":"Resource Constraint","identifier":"rc-ibz8q816STaxIcPlTtyu5g","baseFqn":"pipeline.stages.cd_dev_colimak8sinfralanes.spec.rc-ibz8q816STaxIcPlTtyu5g","outcomes":{},"stepParameters":{"identifier":"rc-ibz8q816STaxIcPlTtyu5g","name":"Resource Constraint","timeout":"1w","when":{"stageStatus":"SUCCESS","condition":"false == \"true\""},"type":"ResourceConstraint","spec":{"name":"Queuing","resourceUnit":"dcf4bd1f19586ac65fecc72148ca54a1f30ea5b1","acquireMode":"ENSURE","permits":1,"holdingScope":"STAGE"}},"startTs":null,"endTs":1694983477019,"stepType":"ResourceConstraint","status":"Skipped","failureInfo":{"message":"","failureTypeList":[],"responseMessages":[]},"skipInfo":null,"nodeRunInfo":{
+  "whenCondition": "\u003c+OnStageSuccess\u003e \u0026\u0026 (\u003c+InfrastructureStepOutput.addRcStep\u003e \u003d\u003d \"true\")",
+  "evaluatedCondition": false,
+  "expressions": [{
+    "expression": "InfrastructureStepOutput.addRcStep",
+    "expressionValue": "false",
+    "count": 1
+  }, {
+    "expression": "OnStageSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }]
+},"executableResponses":[],"unitProgresses":[],"progressData":null,"delegateInfoList":[],"interruptHistories":[],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfralanes/level4:spec/level5:rc-ibz8q816STaxIcPlTtyu5g"},"JIQqs4X9Q8WQN43yIvTHGA":{"uuid":"JIQqs4X9Q8WQN43yIvTHGA","setupId":"IFHe1PzLSnuCgxPENYkgHQ","name":"wait for 2 to finish","identifier":"ShellScript_5","baseFqn":"pipeline.stages.cd_dev_colimak8sinfralanes.spec.execution.steps.part_2.steps.ShellScript_5","outcomes":{},"stepParameters":{"identifier":"ShellScript_5","name":"wait for 2 to finish","timeout":"10m","type":"ShellScript","spec":{"outputVariables":{},"environmentVariables":{},"shell":"Bash","source":{"type":"Inline","spec":{"script":"while true; do\necho []\n  echo SUCCEEDED\n  echo SUCCEEDED\nsleep 5\n  done"}},"onDelegate":true}},"startTs":1694983520782,"endTs":1694983747488,"stepType":"ShellScript","status":"Expired","failureInfo":{"message":"Please Check the timeout configuration on the step to extend the duration of the step","failureTypeList":["EXPIRED"],"responseMessages":[{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]}]},"skipInfo":null,"nodeRunInfo":{
+  "whenCondition": "\u003c+OnStageSuccess\u003e",
+  "evaluatedCondition": true,
+  "expressions": [{
+    "expression": "OnStageSuccess",
+    "expressionValue": "true",
+    "count": 1
+  }]
+},"executableResponses":[{
+  "task": {
+    "taskId": "qvS7hMrpRjyS5Kza8zTBeg-DEL",
+    "taskCategory": "DELEGATE_TASK_V2",
+    "logKeys": ["accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfralanes/level4:spec/level5:execution/level6:steps/level7:part_2/level8:steps/level9:ShellScript_5-commandUnit:Execute"],
+    "units": [],
+    "taskName": "SHELL_SCRIPT_TASK_NG"
+  }
+}],"unitProgresses":[{
+  "unitName": "Execute",
+  "status": "EXPIRED",
+  "startTime": "1694983521034",
+  "endTime": "1694983747478"
+}],"progressData":{"unitProgresses":[{"unitName":"Execute","status":"RUNNING","startTime":"1694983521034"}]},"delegateInfoList":[{"id":"gsKsDxVmTtKRJtL6SRdxCg","name":"gcp-im-delegate","taskId":"qvS7hMrpRjyS5Kza8zTBeg-DEL","taskName":"SHELL_SCRIPT_TASK_NG"}],"interruptHistories":[{"interruptId":"L1KzNO18Q_G_N_DiNvsT3A","tookEffectAt":1694983747478,"interruptType":"EXPIRE_ALL","interruptConfig":{"issuedBy":{"issueTime":1694983746000,"manualIssuer":null,"adviserIssuer":null,"timeoutIssuer":{"timeoutInstanceId":"UvkyUzubRdiBTQ_GlUuIzA"},"triggerIssuer":null},"retryInterruptConfig":{"retryId":""}}},{"interruptId":"L1KzNO18Q_G_N_DiNvsT3A","tookEffectAt":1694983747639,"interruptType":"EXPIRE_ALL","interruptConfig":{"issuedBy":{"issueTime":1694983746000,"manualIssuer":null,"adviserIssuer":null,"timeoutIssuer":{"timeoutInstanceId":"UvkyUzubRdiBTQ_GlUuIzA"},"triggerIssuer":null},"retryInterruptConfig":{"retryId":""}}}],"stepDetails":null,"strategyMetadata":null,"executionInputConfigured":false,"logBaseKey":"accountId:WqS38aeyQjayoqy6mzwceA/orgId:default/projectId:technical_exercise/pipelineId:cd_filtered_list/runSequence:161/level0:pipeline/level1:stages/level2:cd/level3:cd_dev_colimak8sinfralanes/level4:spec/level5:execution/level6:steps/level7:part_2/level8:steps/level9:ShellScript_5"}},"nodeAdjacencyListMap":{"X6VMOvbpTsezpfIKk2JIoQ":{"children":["Z-spVy78SAqs5vKjkcx49w"],"nextIds":[]},"r0aUL34KQLaeKN35CNcO8g":{"children":[],"nextIds":["2EGk5ysWRxOnra3Knbyr-g"]},"P2Wmdvw1R46Psm1-iTip-A":{"children":[],"nextIds":[]},"08gsFqxjSb-2GOmSe3KdkQ":{"children":[],"nextIds":[]},"5pHcZv_jQvqfc8C-dhIEbg":{"children":[],"nextIds":["8QMywx7wQU-6eVFkCVfx0g"]},"__ihVv56QWuGSu5HlHHsDQ":{"children":["r0aUL34KQLaeKN35CNcO8g"],"nextIds":[]},"DIGpEcI1TZas7yEZvb7aFg":{"children":["_C428jw8Rlqz40PhSBa3fw"],"nextIds":[]},"Z-spVy78SAqs5vKjkcx49w":{"children":[],"nextIds":[]},"_C428jw8Rlqz40PhSBa3fw":{"children":["P2Wmdvw1R46Psm1-iTip-A"],"nextIds":["QsxR1-meRLWX6q0D20x0wg"]},"krnYu5h5TQyC826HaJVdfw":{"children":[],"nextIds":["D04Uvr1kTKSDuIVNWeWptw"]},"etb2MY8CTFmZXVymrEVIxg":{"children":["7pd_9HYBTNSE0293dHYNgA"],"nextIds":[]},"otY7yQxcS06W6XJFBB45qA":{"children":["YzkCX1z9QqG3t1YDf7nd9Q"],"nextIds":["4eGsIRS7ThuuMqdii7HlTQ"]},"QsxR1-meRLWX6q0D20x0wg":{"children":[],"nextIds":["gkscVVTBRc2yA0C4W_etRg"]},"8KIL9leqQd2V-t2pY6advg":{"children":[],"nextIds":[]},"7pd_9HYBTNSE0293dHYNgA":{"children":[],"nextIds":["0OcUKsHsSV2HUfdjjyK4yA"]},"TQiVk8ENRU-w2NI_ds8ZUw":{"children":[],"nextIds":["5pHcZv_jQvqfc8C-dhIEbg"]},"Sww2tiGFQeqJrg9JztquzA":{"children":[],"nextIds":[]},"j9-SwGI8S26n6pP8Dbkiww":{"children":["pJaFcqD9RracTxEeQN3jKA"],"nextIds":[]},"gkscVVTBRc2yA0C4W_etRg":{"children":["JIQqs4X9Q8WQN43yIvTHGA"],"nextIds":[]},"pJaFcqD9RracTxEeQN3jKA":{"children":[],"nextIds":["ZCvogZs-T6-34JAElQAOxQ"]},"dwzYlu0ISu6C4DvHzjs0cQ":{"children":["j9-SwGI8S26n6pP8Dbkiww","etb2MY8CTFmZXVymrEVIxg","79cUF_w7RLqOWHoDOzGLFw"],"nextIds":["8KIL9leqQd2V-t2pY6advg"]},"79cUF_w7RLqOWHoDOzGLFw":{"children":["TQiVk8ENRU-w2NI_ds8ZUw"],"nextIds":[]},"2EGk5ysWRxOnra3Knbyr-g":{"children":["Sww2tiGFQeqJrg9JztquzA"],"nextIds":["08gsFqxjSb-2GOmSe3KdkQ"]},"4eGsIRS7ThuuMqdii7HlTQ":{"children":[],"nextIds":["X6VMOvbpTsezpfIKk2JIoQ"]},"Kx1N1Zx_TvuG6vw3UBRrmA":{"children":["VWmYJUzrSW2FUE1Zeuke1Q"],"nextIds":[]},"8QMywx7wQU-6eVFkCVfx0g":{"children":[],"nextIds":["__ihVv56QWuGSu5HlHHsDQ"]},"YzkCX1z9QqG3t1YDf7nd9Q":{"children":[],"nextIds":[]},"0OcUKsHsSV2HUfdjjyK4yA":{"children":[],"nextIds":["krnYu5h5TQyC826HaJVdfw"]},"VWmYJUzrSW2FUE1Zeuke1Q":{"children":["dwzYlu0ISu6C4DvHzjs0cQ"],"nextIds":[]},"D04Uvr1kTKSDuIVNWeWptw":{"children":["otY7yQxcS06W6XJFBB45qA"],"nextIds":[]},"ZCvogZs-T6-34JAElQAOxQ":{"children":[],"nextIds":["Ywbvnga_S6GVSUZdU5mLWw"]},"Ywbvnga_S6GVSUZdU5mLWw":{"children":[],"nextIds":["DIGpEcI1TZas7yEZvb7aFg"]},"JIQqs4X9Q8WQN43yIvTHGA":{"children":[],"nextIds":[]}},"executionMetadata":{"accountId":"WqS38aeyQjayoqy6mzwceA","pipelineIdentifier":"cd_filtered_list","orgIdentifier":"default","projectIdentifier":"technical_exercise","planExecutionId":"6rbxRpzGS6WrsvvAJROFzg"},"representationStrategy":"camelCase"},"rollbackGraph":{"pipelineExecutionSummary":{"pipelineIdentifier":"cd_filtered_list","orgIdentifier":"default","projectIdentifier":"technical_exercise","planExecutionId":"2AmLJfEMRwC7dJwBuULdsw","name":"cd - filtered list","yamlVersion":"0","status":"Expired","tags":[{"key":"13","value":""},{"key":"14","value":""},{"key":"22","value":""},{"key":"cd","value":""},{"key":"key 1 then key 2 order","value":""}],"executionTriggerInfo":{
+  "triggerType": "MANUAL",
+  "triggeredBy": {
+    "uuid": "PipelineService",
+    "identifier": "",
+    "extraInfo": {
+      "email": ""
+    },
+    "triggerIdentifier": "",
+    "triggerName": ""
+  },
+  "isRerun": false
+},"governanceMetadata":{
+  "id": "3825857",
+  "deny": false,
+  "details": [{
+    "policySetId": "",
+    "deny": false,
+    "policyMetadata": [],
+    "policySetName": "ff",
+    "status": "pass",
+    "identifier": "ff",
+    "created": "1665168585186",
+    "accountId": "WqS38aeyQjayoqy6mzwceA",
+    "orgId": "",
+    "projectId": "",
+    "description": ""
+  }, {
+    "policySetId": "",
+    "deny": false,
+    "policyMetadata": [{
+      "policyId": "",
+      "policyName": "Pipeline - forbidden shell commands",
+      "severity": "pass",
+      "denyMessages": [],
+      "status": "pass",
+      "identifier": "forbidden_shell_commands",
+      "accountId": "WqS38aeyQjayoqy6mzwceA",
+      "orgId": "default",
+      "projectId": "technical_exercise",
+      "created": "1665077265590",
+      "updated": "1665169052368",
+      "error": ""
+    }],
+    "policySetName": "testps",
+    "status": "pass",
+    "identifier": "testps",
+    "created": "1693429833469",
+    "accountId": "WqS38aeyQjayoqy6mzwceA",
+    "orgId": "default",
+    "projectId": "technical_exercise",
+    "description": ""
+  }],
+  "message": "",
+  "timestamp": "1694983750126",
+  "status": "pass",
+  "accountId": "WqS38aeyQjayoqy6mzwceA",
+  "orgId": "default",
+  "projectId": "technical_exercise",
+  "entity": "cd_filtered_list",
+  "type": "pipeline",
+  "action": "onrun",
+  "created": "1694983750119"
+},"moduleInfo":{"cd":{"__recast":"io.harness.cdng.pipeline.executions.beans.CDPipelineModuleInfo","artifactDisplayNames":["bitnami/nginx","index.docker.io/bitnami/nginx:latest","bitnami/nginx:latest","latest"],"envGroupIdentifiers":[],"envIdentifiers":["dev"],"environmentTypes":["PreProduction"],"freezeIdentifiers":[],"gitOpsAppIdentifiers":[],"infrastructureIdentifiers":["gcpinfra"],"infrastructureNames":["gcp-k8s-infra"],"infrastructureTypes":["KubernetesDirect"],"serviceDefinitionTypes":["Kubernetes"],"serviceIdentifiers":["dummynginxk8ssvc"]}},"layoutNodeMap":{"fiTXKqvTR1mzDAEh3sx9GQ":{"nodeType":"Deployment","nodeGroup":"STAGE","nodeIdentifier":"cd<+strategy.identifierPostFix>","name":"cd<+strategy.identifierPostFix>","nodeUuid":"fiTXKqvTR1mzDAEh3sx9GQ","status":"NotStarted","module":"cd","moduleInfo":{"cd":{}},"edgeLayoutList":{"currentNodeChildren":[],"nextIds":[]},"isRollbackStageNode":false},"Qe0IfGP-StaIXB7HxLfA_A":{"nodeType":"MATRIX","nodeGroup":"STRATEGY","nodeIdentifier":"cd","name":"cd","nodeUuid":"Qe0IfGP-StaIXB7HxLfA_A","status":"Expired","moduleInfo":{"maxConcurrency":{"value":0},"stepParameters":{"__recast":"io.harness.cdng.pipeline.beans.MultiDeploymentStepParameters","environments":{"__recast":"io.harness.cdng.environment.yaml.EnvironmentsYaml","uuid":"fiTXKqvTR1mzDAEh3sx9GQ","filters":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper"},"valueClass":"java.util.List","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"values":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper","value":[{"__recast":"io.harness.cdng.environment.yaml.EnvironmentYamlV2","uuid":"4n1-439hS-6yZqyBLk9YHg","environmentRef":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper","value":"dev"},"valueClass":"java.lang.String","typeString":true,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"deployToAll":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper"},"valueClass":"java.lang.Boolean","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"filters":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper","value":[{"__recast":"io.harness.cdng.environment.filters.FilterYaml","uuid":"yCzuDpG2RxqoGQ8buJCWsQ","identifier":"filter","type":"tags","entities":["infrastructures"],"spec":{"__recast":"io.harness.cdng.environment.filters.TagsFilter","matchType":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper","value":"any"},"valueClass":"java.lang.String","typeString":true,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"tags":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper","value":{"key1":"value1","key2":"value2"}},"valueClass":"java.util.Map","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}}}}]},"valueClass":"java.util.List","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"infrastructureDefinitions":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper"},"valueClass":"java.util.List","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"infrastructureDefinition":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper"},"valueClass":"io.harness.cdng.infra.yaml.InfraStructureDefinitionYaml","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"environmentInputs":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper"},"valueClass":"java.util.Map","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"serviceOverrideInputs":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper"},"valueClass":"java.util.Map","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"gitOpsClusters":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper"},"valueClass":"java.util.List","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}}}]},"valueClass":"java.util.List","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"environmentsMetadata":{"__recast":"io.harness.cdng.environment.yaml.EnvironmentsMetadata","uuid":"6Wmr542gRfSd4EdD-if67Q","parallel":true}},"childNodeId":"fiTXKqvTR1mzDAEh3sx9GQ","maxConcurrency":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper"},"valueClass":"java.lang.Integer","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"strategyType":"MATRIX","subType":"MULTI_SERVICE_ENV_DEPLOYMENT","serviceYamlV2":{"__recast":"io.harness.cdng.service.beans.ServiceYamlV2","uuid":"9WgyIDiCTHGYVKQ6tzfDlQ","serviceRef":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper","value":"dummynginxk8ssvc"},"valueClass":"java.lang.String","typeString":true,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}},"serviceInputs":{"__recast":"parameterField","__encodedValue":{"__recast":"io.harness.pms.yaml.ParameterDocumentField","expressionValue":null,"expression":false,"valueDoc":{"__recast":"io.harness.pms.yaml.ParameterFieldValueWrapper","value":{"serviceDefinition":{"type":"Kubernetes","spec":{"artifacts":{"primary":{"primaryArtifactRef":"dh","__uuid":"YmiTkOdcQWiDqcdDWnNjFQ"},"__uuid":"1feKh1PXTje2YSIJzApcDg"},"__uuid":"EJHf4ARcROeF-yw3GuOR3A"},"__uuid":"PznMTlT4Ti-gReBkC_0m7g"},"__uuid":"I2UCzG1HQj24VZIAJ3fB7A"}},"valueClass":"java.util.Map","typeString":false,"skipAutoEvaluation":false,"jsonResponseField":false,"responseField":null}}},"deploymentType":"KUBERNETES"}},"startTs":1694983760686,"endTs":1694984660682,"edgeLayoutList":{"currentNodeChildren":["Z6o4kSNySYaxWbwJZ5lX5Q","WtjliDDCQYafYnNN3Vx-eQ","pIxPZ1ghRlSuREvEwlgmmw"],"nextIds":[]},"failureInfo":{
+  "message": "Please Check the timeout configuration on the step to extend the duration of the step"
+},"stepDetails":{"svcEnvCount":{"svcCount":1,"envCount":1}},"isRollbackStageNode":false},"WtjliDDCQYafYnNN3Vx-eQ":{"nodeType":"Deployment","nodeGroup":"STAGE","nodeIdentifier":"cd_dev_colimak8sinfra","name":"cd_dev_colimak8sinfra","nodeUuid":"fiTXKqvTR1mzDAEh3sx9GQ","status":"Running","startTs":1694983760851,"edgeLayoutList":{"currentNodeChildren":[],"nextIds":[]},"nodeRunInfo":{
+  "whenCondition": "\u003c+Always\u003e",
+  "evaluatedCondition": true,
+  "expressions": [{
+    "expression": "Always",
+    "expressionValue": "true",
+    "count": 1
+  }]
+},"nodeExecutionId":"WtjliDDCQYafYnNN3Vx-eQ","strategyMetadata":{"currentiteration":1,"totaliterations":3,"matrixmetadata":{"matrixvalues":{"identifier":"colimak8sinfra","environmentRef":"dev"},"matrixcombination":[1],"subtype":"MULTI_ENV_DEPLOYMENT","matrixkeystoskipinname":["environmentInputs","serviceInputs","infraInputs"],"nodename":""},"identifierpostfix":""},"isRollbackStageNode":false},"Z6o4kSNySYaxWbwJZ5lX5Q":{"nodeType":"Deployment","nodeGroup":"STAGE","nodeIdentifier":"cd_dev_colimak8sinfralanes","name":"cd_dev_colimak8sinfralanes","nodeUuid":"fiTXKqvTR1mzDAEh3sx9GQ","status":"Running","startTs":1694983760820,"edgeLayoutList":{"currentNodeChildren":[],"nextIds":[]},"nodeRunInfo":{
+  "whenCondition": "\u003c+Always\u003e",
+  "evaluatedCondition": true,
+  "expressions": [{
+    "expression": "Always",
+    "expressionValue": "true",
+    "count": 1
+  }]
+},"nodeExecutionId":"Z6o4kSNySYaxWbwJZ5lX5Q","strategyMetadata":{"currentiteration":0,"totaliterations":3,"matrixmetadata":{"matrixvalues":{"identifier":"colimak8sinfralanes","environmentRef":"dev"},"matrixcombination":[0],"subtype":"MULTI_ENV_DEPLOYMENT","matrixkeystoskipinname":["environmentInputs","serviceInputs","infraInputs"],"nodename":""},"identifierpostfix":""},"isRollbackStageNode":false},"pIxPZ1ghRlSuREvEwlgmmw":{"nodeType":"Deployment","nodeGroup":"STAGE","nodeIdentifier":"cd_dev_gcpinfra","name":"cd_dev_gcpinfra","nodeUuid":"fiTXKqvTR1mzDAEh3sx9GQ","status":"Expired","moduleInfo":{"cd":{"__recast":"io.harness.cdng.pipeline.executions.beans.CDStageModuleInfo","rollbackDuration":0,"serviceInfo":{"__recast":"io.harness.cdng.pipeline.executions.beans.ServiceExecutionSummary","identifier":"dummynginxk8ssvc","displayName":"dummy-nginx-k8s-svc","deploymentType":"Kubernetes","gitOpsEnabled":false,"artifacts":{"__recast":"io.harness.cdng.pipeline.executions.beans.ServiceExecutionSummary$ArtifactsSummary","primary":{"__recast":"io.harness.ngpipeline.pipeline.executions.beans.DockerArtifactSummary","imagePath":"bitnami/nginx","tag":"latest"},"artifactDisplayName":"bitnami/nginx:latest","sidecars":[]}},"infraExecutionSummary":{"__recast":"io.harness.cdng.pipeline.executions.beans.InfraExecutionSummary","identifier":"dev","name":"dev","type":"PreProduction","infrastructureIdentifier":"gcpinfra","infrastructureName":"gcp-k8s-infra"}}},"startTs":1694983760849,"endTs":1694983762173,"edgeLayoutList":{"currentNodeChildren":[],"nextIds":[]},"nodeRunInfo":{
+  "whenCondition": "\u003c+Always\u003e",
+  "evaluatedCondition": true,
+  "expressions": [{
+    "expression": "Always",
+    "expressionValue": "true",
+    "count": 1
+  }]
+},"failureInfo":{
+  "message": "Please Check the timeout configuration on the step to extend the duration of the step"
+},"failureInfoDTO":{"message":"Please Check the timeout configuration on the step to extend the duration of the step","failureTypeList":["EXPIRED"],"responseMessages":[{"code":"TIMEOUT_ENGINE_EXCEPTION","level":"ERROR","message":"Please Check the timeout configuration on the step to extend the duration of the step","exception":null,"failureTypes":["EXPIRED"]}]},"nodeExecutionId":"pIxPZ1ghRlSuREvEwlgmmw","strategyMetadata":{"currentiteration":2,"totaliterations":3,"matrixmetadata":{"matrixvalues":{"identifier":"gcpinfra","environmentRef":"dev"},"matrixcombination":[2],"subtype":"MULTI_ENV_DEPLOYMENT","matrixkeystoskipinname":["environmentInputs","serviceInputs","infraInputs"],"nodename":""},"identifierpostfix":""},"isRollbackStageNode":false}},"modules":["cd"],"startingNodeId":"Qe0IfGP-StaIXB7HxLfA_A","startTs":1694983750127,"endTs":1694984660809,"createdAt":1694983750163,"canRetry":true,"showRetryHistory":false,"runSequence":162,"successfulStagesCount":0,"runningStagesCount":0,"failedStagesCount":0,"totalStagesCount":1,"storeType":"INLINE","executionInputConfigured":false,"parentStageInfo":{"hasparentpipeline":false,"stagenodeid":"vkVeMcWRTJeO5dAixkrwCg","executionid":"","identifier":"","projectid":"","orgid":"","runsequence":0},"stagesExecuted":["pipeline.stages.cd","pipeline.stages.cd","pipeline.stages.cd"],"stagesExecutedNames":{},"allowStageExecutions":false,"executionMode":"PIPELINE_ROLLBACK","notesExistForPlanExecutionId":false,"stagesExecution":false}}},"metaData":null,"correlationId":"0f144423-1745-4d6c-b596-911f548402c2"}
