@@ -1,0 +1,9 @@
+apiVersion: v2
+name: parent-chart
+version: 0.0.1
+description: Parent Helm chart.
+
+dependencies:
+  - name: nginx-chart
+    version: 1.1.1
+    repository: https://harness.jfrog.io/artifactory/api/helm/harness-helm-charts
